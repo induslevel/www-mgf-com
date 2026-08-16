@@ -1,31 +1,99 @@
 ---
 ---
-<footer class="container mx-auto px-4 max-w-5xl mt-16 mb-8 font-sans">
-  <div class="bg-[#12192c] border border-[#c5a880]/15 p-8 rounded-2xl shadow text-center">
-    <div class="mb-6 space-y-3">
-      <h3 class="text-2xl font-serif font-black text-white tracking-tight">
-        MGF <span class="text-[#c5a880] font-light">LAW</span>
-      </h3>
-      <p class="text-sm text-slate-300 max-w-xl mx-auto leading-relaxed">
-        Mughal Gaudry & Franklin PC is a minority-owned, diverse, highly sophisticated, and client-oriented boutique intellectual property (IP) law firm. We bring decades of collective engineering experience to protect our clients' cutting-edge technological innovations.
-      </p>
-      <p class="text-xs text-slate-400 max-w-md mx-auto pt-2">
-        📍 3532 N. Franklin St, Suite A, Denver, CO 80205
-      </p>
-    </div>
+<footer class="container mx-auto px-4 max-w-6xl mt-20 mb-8 font-sans">
+  <div class="bg-[#12192c] border border-[#c5a880]/15 p-8 sm:p-12 rounded-3xl shadow-xl space-y-12">
     
-    <!-- Navigation Links -->
-    <div class="flex flex-wrap justify-center items-center gap-2 sm:gap-3 mt-6">
-      <a href="/about-us" class="px-4 py-2 rounded-lg border border-[#c5a880]/20 text-[#c5a880] hover:bg-[#c5a880]/5 text-xs font-bold tracking-wider uppercase transition-all">About Us</a>
-      <a href="/services" class="px-4 py-2 rounded-lg border border-[#c5a880]/20 text-[#c5a880] hover:bg-[#c5a880]/5 text-xs font-bold tracking-wider uppercase transition-all">Services</a>
-      <a href="/diversity-statement" class="px-4 py-2 rounded-lg border border-[#c5a880]/20 text-[#c5a880] hover:bg-[#c5a880]/5 text-xs font-bold tracking-wider uppercase transition-all">Diversity Statement</a>
-      <a href="/terms" class="px-4 py-2 rounded-lg border border-[#c5a880]/20 text-[#c5a880] hover:bg-[#c5a880]/5 text-xs font-bold tracking-wider uppercase transition-all">Terms of Use</a>
-      <a href="/privacy" class="px-4 py-2 rounded-lg border border-[#c5a880]/20 text-[#c5a880] hover:bg-[#c5a880]/5 text-xs font-bold tracking-wider uppercase transition-all">Privacy Policy</a>
-      <a href="/contact" class="px-4 py-2 rounded-lg bg-[#c5a880] text-[#0A0F1D] hover:bg-[#b0936b] text-xs font-bold tracking-wider uppercase transition-all shadow shadow-[#c5a880]/10">Contact Us</a>
+    <!-- Top Row: Brand Info + Contact + Subscribe -->
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12">
+      
+      <!-- Column 1: Brand & Bio -->
+      <div class="md:col-span-5 space-y-4">
+        <h3 class="text-2xl sm:text-3xl font-serif font-black text-white tracking-tight">
+          MGF <span class="text-[#c5a880] font-light">LAW</span>
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-sm">
+          Mughal Gaudry & Franklin PC is a minority-owned, diverse, highly sophisticated, and result-oriented boutique intellectual property (IP) law firm. We bring decades of collective engineering experience to protect our clients' cutting-edge technological innovations.
+        </p>
+        <div class="pt-2 space-y-1.5 text-xs text-slate-400">
+          <p class="flex items-center gap-2">
+            <span class="text-[#c5a880]">📍</span>
+            <span>1500 NW Bethany Blvd., Suite 200 Beaverton, OR 97006</span>
+          </p>
+          <p class="flex items-center gap-2">
+            <span class="text-[#c5a880]">📞</span>
+            <a href="tel:9716340286" class="hover:text-[#c5a880] font-semibold text-slate-300">(971) 634-0286</a>
+          </p>
+          <p class="flex items-center gap-2">
+            <span class="text-[#c5a880]">✉️</span>
+            <a href="mailto:contact@mgf.law" class="hover:text-[#c5a880] text-slate-300">contact@mgf.law</a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Column 2: Company Navigation Links -->
+      <div class="md:col-span-2 space-y-3">
+        <h4 class="text-xs font-bold text-[#c5a880] uppercase tracking-widest">Company</h4>
+        <ul class="space-y-2 text-xs font-medium text-slate-300">
+          <li><a href="/" class="hover:text-[#c5a880] transition-colors">Home</a></li>
+          <li><a href="/about-us" class="hover:text-[#c5a880] transition-colors">About Us</a></li>
+          <li><a href="/services" class="hover:text-[#c5a880] transition-colors">Services</a></li>
+          <li><a href="/technologies" class="hover:text-[#c5a880] transition-colors">Technologies</a></li>
+          <li><a href="/diversity-statement" class="hover:text-[#c5a880] transition-colors">Diversity Statement</a></li>
+          <li><a href="/contact" class="hover:text-[#c5a880] transition-colors">Contact Us</a></li>
+          <li><a href="/privacy" class="hover:text-[#c5a880] transition-colors">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: IP Resources & Helpful Links -->
+      <div class="md:col-span-2 space-y-3">
+        <h4 class="text-xs font-bold text-[#c5a880] uppercase tracking-widest">IP Links</h4>
+        <ul class="space-y-2 text-xs font-medium text-slate-300">
+          <li><a href="https://www.uspto.gov" target="_blank" rel="noopener noreferrer" class="hover:text-[#c5a880] transition-colors flex items-center gap-1">USPTO <span>↗</span></a></li>
+          <li><a href="https://www.copyright.gov" target="_blank" rel="noopener noreferrer" class="hover:text-[#c5a880] transition-colors flex items-center gap-1">US Copyright Office <span>↗</span></a></li>
+          <li><a href="https://www.epo.org" target="_blank" rel="noopener noreferrer" class="hover:text-[#c5a880] transition-colors flex items-center gap-1">European Patent Office <span>↗</span></a></li>
+          <li><a href="https://patentlyo.com" target="_blank" rel="noopener noreferrer" class="hover:text-[#c5a880] transition-colors flex items-center gap-1">PatentlyO Blog <span>↗</span></a></li>
+          <li><a href="https://oedci.uspto.gov/OEDCI/" target="_blank" rel="noopener noreferrer" class="hover:text-[#c5a880] transition-colors flex items-center gap-1">Patent Attorney Verification <span>↗</span></a></li>
+          <li><a href="https://patents.google.com" target="_blank" rel="noopener noreferrer" class="hover:text-[#c5a880] transition-colors flex items-center gap-1">Patent Search <span>↗</span></a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Newsletter / Stay Updated -->
+      <div class="md:col-span-3 space-y-3">
+        <h4 class="text-xs font-bold text-[#c5a880] uppercase tracking-widest">Subscribe</h4>
+        <p class="text-xs text-slate-300 leading-relaxed">
+          Stay updated with the latest IP law insights, PTAB changes, and firm news.
+        </p>
+        <form onsubmit="event.preventDefault(); alert('Thank you for subscribing to MGF Law Insights!');" class="space-y-2 pt-1">
+          <input 
+            type="email" 
+            placeholder="your@email.com" 
+            required 
+            class="w-full px-3 py-2 text-xs rounded-lg bg-[#0A0F1D] border border-[#c5a880]/20 text-white placeholder-slate-500 focus:outline-none focus:border-[#c5a880]"
+          />
+          <button 
+            type="submit" 
+            class="w-full py-2 rounded-lg bg-[#c5a880] text-[#0A0F1D] hover:bg-[#b0936b] transition-all font-bold text-xs uppercase tracking-wider shadow"
+          >
+            Subscribe
+          </button>
+        </form>
+      </div>
+
     </div>
-    
-    <div class="mt-8 text-xs text-slate-400">
-      &copy; {new Date().getFullYear()} Mughal Gaudry & Franklin PC. All rights reserved.
+
+    <!-- Bottom Row: Copyright & Legal Disclaimer -->
+    <div class="border-t border-[#c5a880]/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-400">
+      <div>
+        Copyright &copy; {new Date().getFullYear()} Mughal Gaudry & Franklin PC. All rights reserved.
+      </div>
+      <div class="flex items-center gap-4 text-[11px]">
+        <a href="/terms" class="hover:text-[#c5a880] transition-colors">Terms of Use</a>
+        <span>•</span>
+        <a href="/privacy" class="hover:text-[#c5a880] transition-colors">Privacy Policy</a>
+        <span>•</span>
+        <a href="/diversity-statement" class="hover:text-[#c5a880] transition-colors">Inclusion & Diversity</a>
+      </div>
     </div>
+
   </div>
 </footer>
