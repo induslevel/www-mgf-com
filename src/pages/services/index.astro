@@ -1,0 +1,157 @@
+---
+import Layout from '../../layouts/Layout.astro';
+
+const serviceCategories = [
+  {
+    name: "Preparation & Filing",
+    description: "Expert preparation and prosecution of patent and trademark applications to secure your global rights.",
+    services: [
+      {
+        slug: "foreign-patent-prosecution",
+        title: "Foreign Patent Prosecution",
+        desc: "Every country has its own Patent laws and rules. We ensure consistent prosecution of foreign matters aligned with your US strategy.",
+        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1000"
+      },
+      {
+        slug: "patent-preparation",
+        title: "Patent Preparation",
+        desc: "Drafting high-quality applications comprising written descriptions, figures, and claims to deconstruct your technology and build strong protection.",
+        image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=1000"
+      },
+      {
+        slug: "patent-prosecution",
+        title: "Patent Prosecution",
+        desc: "Active negotiation with the USPTO, utilizing examiner analytics and examiner interviews to carve out the robust monopoly rights you deserve.",
+        image: "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&q=80&w=1000"
+      },
+      {
+        slug: "trademark-services",
+        title: "Trademark Services",
+        desc: "Strategic brand clearance, searches, and naming strategy to avoid costly conflicts, followed by active filing and brand policing.",
+        image: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&q=80&w=1000"
+      }
+    ]
+  },
+  {
+    name: "Post-Grant & Proceedings",
+    description: "Defense and correction of existing patent assets, and strategic deflection of third-party patent assertions.",
+    services: [
+      {
+        slug: "opinions",
+        title: "Opinions",
+        desc: "Rigorous technical and legal assessments regarding invalidity, non-infringement, and patentability to protect against willful infringement.",
+        image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&q=80&w=1000"
+      },
+      {
+        slug: "portfolio-analysis",
+        title: "Portfolio Analysis",
+        desc: "Understanding the strengths and weaknesses of your patent portfolio across different technology areas to align assets to commercial goals.",
+        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000"
+      },
+      {
+        slug: "pto-proceedings-aia",
+        title: "PTO Proceedings under the AIA",
+        desc: "Expert representation in USPTO trial venues, including Inter Partes Review (IPR), Post Grant Review (PGR), and Ex Parte Re-Examinations.",
+        image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1000"
+      },
+      {
+        slug: "reexamination-reissue",
+        title: "Reexamination & Reissue",
+        desc: "Post-grant tools to challenge cited patents, broaden existing patent scope, or correct priority and technical defects in issued patents.",
+        image: "https://images.unsplash.com/photo-1447069387593-a5de0862481e?auto=format&fit=crop&q=80&w=1000"
+      }
+    ]
+  },
+  {
+    name: "Strategy & Commercialization",
+    description: "Operational guidelines, patent landscaping, and transaction support to treat intellectual property as a strategic business asset.",
+    services: [
+      {
+        slug: "business-counseling-services",
+        title: "Business Counseling Services",
+        desc: "Review of operational agreements, cap tables, and IP assignment clauses to ensure startup governance, equity, and ownership are aligned.",
+        image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1000"
+      },
+      {
+        slug: "freedom-to-operate",
+        title: "Freedom to Operate",
+        desc: "Analyzing the patent landscape for your planned products or processes to determine, mitigate, and resolve infringement risks early.",
+        image: "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?auto=format&fit=crop&q=80&w=1000"
+      },
+      {
+        slug: "ip-rights-government-contracts",
+        title: "IP Rights in Government Contracts",
+        desc: "Navigating Bayh-Dole requirements, federal funding titles, and Technical Data Rights in government procurement.",
+        image: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&q=80&w=1000"
+      },
+      {
+        slug: "licensing-litigation-support",
+        title: "Licensing & Litigation Support",
+        desc: "Defensive assertions analysis, inbound/outbound licensing campaigns, cross-licensing arrangements, and litigation preparedness.",
+        image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=1000"
+      }
+    ]
+  }
+];
+---
+
+<Layout title="Our Services | MGF Law">
+  <div class="min-h-screen bg-[#0A0F1D] text-white selection:bg-[#c5a880] selection:text-[#0A0F1D] pb-16">
+    <!-- Header Hero -->
+    <section class="border-b border-[#c5a880]/10 bg-[#070b16] py-20 text-center space-y-4">
+      <div class="container mx-auto px-4 max-w-4xl">
+        <span class="text-xs font-bold uppercase tracking-widest text-[#c5a880]">Our Capabilities</span>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-serif text-white leading-tight font-light">
+          Intellectual Property <span class="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#c5a880] to-[#e4d4b1]">Services</span>
+        </h1>
+        <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed font-sans">
+          MGF PC offers highly sophisticated, engineering-backed technical counsel and legal strategy across the entire lifecycle of intellectual property.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services Categories & Cards -->
+    <section class="container mx-auto px-4 py-16 max-w-5xl space-y-24 font-sans">
+      {serviceCategories.map((category) => (
+        <div class="space-y-8">
+          <!-- Category Header -->
+          <div class="border-b border-[#c5a880]/15 pb-4 space-y-2">
+            <h2 class="text-2xl sm:text-3xl font-serif text-[#c5a880] font-semibold tracking-wide">
+              {category.name}
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-400 max-w-3xl leading-relaxed">
+              {category.description}
+            </p>
+          </div>
+
+          <!-- Services Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {category.services.map((service) => (
+              <a href={`/services/${service.slug}`} class="group bg-[#12192c] border border-[#c5a880]/10 rounded-2xl overflow-hidden shadow transition-all duration-300 hover:border-[#c5a880]/35 hover:-translate-y-1 flex flex-col justify-between">
+                <div>
+                  <div class="h-48 overflow-hidden relative">
+                    <img src={service.image} alt={service.title} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#12192c] via-transparent to-transparent opacity-60"></div>
+                  </div>
+                  <div class="p-6 space-y-3">
+                    <h3 class="text-xl font-bold text-white font-serif group-hover:text-[#c5a880] transition-colors">
+                      {service.title}
+                    </h3>
+                    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed line-clamp-3">
+                      {service.desc}
+                    </p>
+                  </div>
+                </div>
+                <div class="px-6 pb-6 pt-2">
+                  <span class="inline-flex items-center gap-1.5 text-xs font-bold text-[#c5a880] group-hover:underline">
+                    Explore Capability <span>→</span>
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </div>
+      ))}
+    </section>
+  </div>
+</Layout>

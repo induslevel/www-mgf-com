@@ -24,7 +24,7 @@ import CookieBanner from '../components/CookieBanner.astro';
     
     <SEO title={title} />
     <script is:inline>
-      const theme = localStorage.getItem('theme') || 'light';
+      const theme = localStorage.getItem('theme') || 'dark';
       if (theme === 'dark') document.documentElement.classList.add('dark');
       else document.documentElement.classList.remove('dark');
       

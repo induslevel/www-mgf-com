@@ -56,6 +56,36 @@ const team = [
     desc: 'Tom has 30 years of experience in patent prosecution, licensing, and intellectual capital management. He is an expert in portfolio management, IP audits, and strategic planning, and developed the client-facing portfolio tool, Triangle IP. He is widely recognized by Chambers USA, The Best Lawyers in America®, Legal 500 US, IAM Patent 1000, and IAM Strategy 300, and has been named a Colorado Super Lawyer and Lawyer of the Year.'
   }
 ];
+
+const practiceCategories = [
+  {
+    name: "Preparation & Filing",
+    services: [
+      { slug: "foreign-patent-prosecution", name: "Foreign Patent Prosecution" },
+      { slug: "patent-preparation", name: "Patent Preparation" },
+      { slug: "patent-prosecution", name: "Patent Prosecution" },
+      { slug: "trademark-services", name: "Trademark Services" }
+    ]
+  },
+  {
+    name: "Post-Grant & Proceedings",
+    services: [
+      { slug: "opinions", name: "Opinions" },
+      { slug: "portfolio-analysis", name: "Portfolio Analysis" },
+      { slug: "pto-proceedings-aia", name: "PTO Proceedings under the AIA" },
+      { slug: "reexamination-reissue", name: "Reexamination & Reissue" }
+    ]
+  },
+  {
+    name: "Strategy & Commercialization",
+    services: [
+      { slug: "business-counseling-services", name: "Business Counseling Services" },
+      { slug: "freedom-to-operate", name: "Freedom to Operate" },
+      { slug: "ip-rights-government-contracts", name: "IP Rights in Government Contracts" },
+      { slug: "licensing-litigation-support", name: "Licensing & Litigation Support" }
+    ]
+  }
+];
 ---
 
 <Layout title="Mughal Gaudry & Franklin PC | MGF Law">
@@ -142,74 +172,47 @@ const team = [
       </div>
     </section>
 
-    <!-- Expertise / Lifecycle Section -->
+    <!-- Practice Areas Grid Section (Lists all 12 Services with Links) -->
     <section id="expertise" class="border-y border-[#c5a880]/10 bg-[#070b16] py-24">
       <div class="container mx-auto px-4 max-w-5xl space-y-16">
         <div class="text-center space-y-4 max-w-2xl mx-auto">
-          <span class="text-xs font-bold uppercase tracking-widest text-[#c5a880]">What We Do</span>
-          <h2 class="text-3xl sm:text-4xl font-serif text-white">Multidisciplinary IP Solutions</h2>
+          <span class="text-xs font-bold uppercase tracking-widest text-[#c5a880]">Our Capabilities</span>
+          <h2 class="text-3xl sm:text-4xl font-serif text-white">Multidisciplinary Practice Areas</h2>
           <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
-            Our team ensures better outcomes at every stage of your intellectual property lifecycle. We proactively manage legal risk to enhance, build and protect your assets.
+            Our team ensures better outcomes at every stage of your intellectual property lifecycle. Select any capability below to view our specialized workflows and technical depth.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- 01. Pre-Filing -->
-          <div class="bg-[#0A0F1D] border border-[#c5a880]/10 p-8 rounded-2xl space-y-6 shadow hover:border-[#c5a880]/30 transition-colors">
-            <div class="flex items-center justify-between">
-              <span class="text-3xl font-black text-[#c5a880]/20 font-mono">01.</span>
-              <span class="w-2.5 h-2.5 rounded-full bg-[#c5a880]"></span>
+          {practiceCategories.map((category, index) => (
+            <div class="bg-[#0A0F1D] border border-[#c5a880]/10 p-8 rounded-2xl space-y-6 shadow hover:border-[#c5a880]/30 transition-colors flex flex-col justify-between">
+              <div class="space-y-6">
+                <div class="flex items-center justify-between">
+                  <span class="text-3xl font-black text-[#c5a880]/20 font-mono">0{index + 1}.</span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-[#c5a880]"></span>
+                </div>
+                <h3 class="text-xl font-bold text-[#c5a880] font-serif">{category.name}</h3>
+                
+                <ul class="space-y-4 text-xs sm:text-sm text-slate-300 font-medium">
+                  {category.services.map((service) => (
+                    <li>
+                      <a href={`/services/${service.slug}`} class="flex items-center gap-2 group hover:text-[#c5a880] transition-colors">
+                        <svg class="w-4 h-4 text-[#c5a880]/40 group-hover:text-[#c5a880] shrink-0 transition-colors" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5"></path>
+                        </svg>
+                        <span class="group-hover:underline leading-relaxed">{service.name}</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div class="pt-6">
+                <a href="/services" class="inline-flex items-center gap-1.5 text-xs font-bold text-[#c5a880]/80 hover:text-[#c5a880] hover:underline">
+                  View Practice Category <span>→</span>
+                </a>
+              </div>
             </div>
-            <h3 class="text-xl font-bold text-white font-serif">Pre-Filing Support</h3>
-            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Practical advice, portfolio strategizing, and thorough risk analysis for the application phase.
-            </p>
-            <ul class="space-y-2.5 text-xs text-slate-300 font-medium pt-2">
-              <li class="flex items-center gap-2">✔ Prior art searches</li>
-              <li class="flex items-center gap-2">✔ Patentability analysis</li>
-              <li class="flex items-center gap-2">✔ Patent application drafting</li>
-              <li class="flex items-center gap-2">✔ Patent strategy development</li>
-              <li class="flex items-center gap-2">✔ Portfolio management</li>
-            </ul>
-          </div>
-
-          <!-- 02. Filing & Prosecution -->
-          <div class="bg-[#0A0F1D] border border-[#c5a880]/10 p-8 rounded-2xl space-y-6 shadow hover:border-[#c5a880]/30 transition-colors">
-            <div class="flex items-center justify-between">
-              <span class="text-3xl font-black text-[#c5a880]/20 font-mono">02.</span>
-              <span class="w-2.5 h-2.5 rounded-full bg-[#c5a880]"></span>
-            </div>
-            <h3 class="text-xl font-bold text-white font-serif">Filing & Prosecution</h3>
-            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Strategic guidance to ensure optimal outcomes during patent examination.
-            </p>
-            <ul class="space-y-2.5 text-xs text-slate-300 font-medium pt-2">
-              <li class="flex items-center gap-2">✔ USPTO filing & prosecution</li>
-              <li class="flex items-center gap-2">✔ Office action responses</li>
-              <li class="flex items-center gap-2">✔ Patent amendments</li>
-              <li class="flex items-center gap-2">✔ Appeals and petitions</li>
-              <li class="flex items-center gap-2">✔ International patent coordination</li>
-            </ul>
-          </div>
-
-          <!-- 03. Post-Grant & Defense -->
-          <div class="bg-[#0A0F1D] border border-[#c5a880]/10 p-8 rounded-2xl space-y-6 shadow hover:border-[#c5a880]/30 transition-colors">
-            <div class="flex items-center justify-between">
-              <span class="text-3xl font-black text-[#c5a880]/20 font-mono">03.</span>
-              <span class="w-2.5 h-2.5 rounded-full bg-[#c5a880]"></span>
-            </div>
-            <h3 class="text-xl font-bold text-white font-serif">Post-Grant & Counsel</h3>
-            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-              Legal representation and advice for patent enforcement, defense, and trademark registration.
-            </p>
-            <ul class="space-y-2.5 text-xs text-slate-300 font-medium pt-2">
-              <li class="flex items-center gap-2">✔ Patent litigation support</li>
-              <li class="flex items-center gap-2">✔ Post-grant proceedings (IPR, PGR)</li>
-              <li class="flex items-center gap-2">✔ Freedom to operate analysis</li>
-              <li class="flex items-center gap-2">✔ Trademark prosecution</li>
-              <li class="flex items-center gap-2">✔ General IP counseling</li>
-            </ul>
-          </div>
+          ))}
         </div>
       </div>
     </section>
