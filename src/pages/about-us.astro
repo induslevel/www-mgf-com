@@ -1,140 +1,499 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-const founders = [
+const partners = [
   {
     name: 'Usman Mughal',
     role: 'Co-Founder, Patent Attorney, Shareholder',
-    creds: 'J.D. | M.S. | B.S.',
-    bio: 'Usman Mughal has been working in the patent preparation and prosecution field since 2008. He has a B.S. degree in computer engineering and a M.S. degree in electrical engineering. Usman defended his M.S. thesis from NC State University on hierarchical approach to global modeling of active antenna arrays. Usman went on to join Intel Corp. where he worked as an analog/mixed-signal design engineer for 9 years. Usman designed PLLs, DLLs, I/Os, thermal sensors, memory circuits, voltage regulators, debug software, clock distribution circuits, etc. At Intel, Usman received awards for his work and was an inventor on 11 patents. While working at Intel, Usman attended law school because of his interest in becoming a patent attorney. After passing the bar, Usman worked in law firms as an associate and then as a named partner. He co-managed day-to-day domestic and foreign prosecution and budgeting activities for a former client\'s power management and circuits patent portfolio for various law firms. Usman\'s technology practice for patents is deep and broad and covers 5G RAN standard, mixed signal circuits, antennas, software, memories (volatile and non-volatile), semiconductor process and packaging, business methods, artificial intelligence hardware, and processors. Usman is regularly recognized for his work. For example, Usman is listed as a "Rising star" by the Oregon Super Lawyers over multiple years. He is rated as "Top Lawyer" by Portland Monthly magazine. Usman is also active in the legal community and community at large. He is part of the founding board of Oregon Muslim Bar Association (OMBA). At OMBA, he interviews judicial and political candidates for endorsement requests. Usman also co-founded a free health clinic in Portland, Oregon, which was later merged with a larger free health provider. Usman supports education for the underprivileged. He led the funding and construction of a primary school in a remote village of Pakistan. Over 50% of the student body is female in that school.'
+    creds: ['J.D.', 'M.S.', 'B.S.'],
+    bio: "Usman Mughal has been working in the patent preparation and prosecution field since 2008. He has a B.S. degree in computer engineering and a M.S. degree in electrical engineering. Usman defended his M.S. thesis from NC State University on hierarchical approach to global modeling of active antenna arrays. Usman went on to join Intel Corp. where he worked as an analog/mixed-signal design engineer for 9 years. Usman designed PLLs, DLLs, I/Os, thermal sensors, memory circuits, voltage regulators, debug software, clock distribution circuits, etc. At Intel, Usman received awards for his work and was an inventor on 11 patents. While working at Intel, Usman attended law school because of his interest in becoming a patent attorney. After passing the bar, Usman worked in law firms as an associate and then as a named partner. He co-managed day-to-day domestic and foreign prosecution and budgeting activities for a former client's power management and circuits patent portfolio for various law firms. Usman's technology practice for patents is deep and broad and covers 5G RAN standard, mixed signal circuits, antennas, software, memories (volatile and non-volatile), semiconductor process and packaging, business methods, artificial intelligence hardware, and processors. Usman is regularly recognized for his work. For example, Usman is listed as a \"Rising star\" by the Oregon Super Lawyers over multiple years. He is rated as \"Top Lawyer\" by Portland Monthly magazine. Usman is also active in the legal community and community at large. He is part of the founding board of Oregon Muslim Bar Association (OMBA). At OMBA, he interviews judicial and political candidates for endorsement requests. Usman also co-founded a free health clinic in Portland, Oregon, which was later merged with a larger free health provider. Usman supports education for the underprivileged. He led the funding and construction of a primary school in a remote village of Pakistan. Over 50% of the student body is female in that school."
   },
   {
     name: 'Kate Gaudry',
     role: 'Co-Founder, Patent Attorney, Shareholder',
-    creds: 'Ph.D. | J.D. | B.S.',
-    bio: 'Kate\'s practice and background spans technology areas, including physics, neuroscience, artificial intelligence, biology and software. Her current practice focuses on artificial intelligence, bioinformatics, and software. Kate has wet/dry-lab experiences in these areas from institutions including Harvard University, the University of California San Diego, Los Alamos National Laboratory, and M.D. Anderson Cancer Center. Kate represents clients ranging from start-ups to Fortune 100 companies. She has represented universities and companies that have spun-off from universities. Kate has been an active participant in the legal field that has considered how the advancement of artificial intelligence will affect the legal field and may shape patenting strategies or examination in the field. She has co-authored dozens of articles and a book chapter pertaining to this topic, and she is a Vice-Chair of the AI Task Force of the American Intellectual Property Law Association (AIPLA). Kate is also a strong advocate for the physically disabled. She has promoted virtual-work environments and other arrangements, so as to ensure that others with disabilities can intellectually and socially contribute to society. She has been a vocal advocate of others with disabilities through online groups and by contributing to a book about real-life experiences pertaining to a new treatment for multiple sclerosis. Burt, R. K. (2023). Everyday Miracles: Curing Multiple Sclerosis, Scleroderma and Other Diseases by Hematopoietic Stem Cell Transplant (pp. 78-80). Forefront Books.'
+    creds: ['Ph.D.', 'J.D.', 'B.S.'],
+    bio: "Kate's practice and background spans technology areas, including physics, neuroscience, artificial intelligence, biology and software. Her current practice focuses on artificial intelligence, bioinformatics, and software. Kate has wet/dry-lab experiences in these areas from institutions including Harvard University, the University of California San Diego, Los Alamos National Laboratory, and M.D. Anderson Cancer Center. Kate represents clients ranging from start-ups to Fortune 100 companies. She has represented universities and companies that have spun-off from universities. Kate has been an active participant in the legal field that has considered how the advancement of artificial intelligence will affect the legal field and may shape patenting strategies or examination in the field. She has co-authored dozens of articles and a book chapter pertaining to this topic, and she is a Vice-Chair of the AI Task Force of the American Intellectual Property Law Association (AIPLA). Kate is also a strong advocate for the physically disabled. She has promoted virtual-work environments and other arrangements, so as to ensure that others with disabilities can intellectually and socially contribute to society. She has been a vocal advocate of others with disabilities through online groups and by contributing to a book about real-life experiences pertaining to a new treatment for multiple sclerosis. Burt, R. K. (2023). Everyday Miracles: Curing Multiple Sclerosis, Scleroderma and Other Diseases by Hematopoietic Stem Cell Transplant (pp. 78-80). Forefront Books."
   },
   {
     name: 'Thomas Franklin',
     role: 'Co-Founder, Patent Attorney, Shareholder',
-    creds: 'J.D. | B.S.',
-    bio: 'Thomas Franklin ("Tom") is a founding partner of the firm. He focuses his practice on patent prosecution, licensing, and intellectual capital management with 30 years of experience. Tom is expert in portfolio management, IP audits, due diligence, and strategic planning processes. Through an IP Asset Management plan, he tailors strategy to business goals, competitive pressures, and funding constraints to leverage intangible assets with intellectual property. As an entrepreneur, Tom has developed a client-facing patent portfolio management tool, Triangle IP, that allows a company to understand and manage their patent portfolio. Tom uses IP protection to maintain the dominance of large companies and assist emerging enterprises who are vying to dominate. Tom is widely recognized by Chambers USA, The Best Lawyers in America®, Legal 500 US for Patent Prosecution. Awards include a Managing Intellectual Property magazine IP Star, a Colorado Super Lawyer, Lexology and the International Law Office Client Choice Award USA & Canada, a top patent practitioner by IAM Patent 1000, and a top strategist in IAM Strategy 300. He was honored by Law Week Colorado to its "Barrister\'s Best" list as the "People\'s Choice" for Best IP Non-Litigator and named a Lawyer of the Year in 2012 by Law Week Colorado for the successful effort to bring a Regional Patent and Trademark Office to the Rocky Mountain Region in Denver to fulfill his vision of a nationwide workforce of the brightest and best examiners. The San Diego State University Alumni Association recognized and honored Tom with the 2014 Distinguished Alumni Award from the College of Engineering. Before entering the field of law, Tom spent nine years working in semiconductor fabrication and digital design for wireless data links as a Senior Engineer in the defense industry. Tom\'s technical experience broadly covers the areas of software, AI, health tech, blockchain, Internet technology, IT security, fintech, content delivery, business methods, clean tech, circuit design, imaging arrays, cryptographic design, telecommunications, electronic design tools, wireless communications, networking, and telemetry systems.'
+    creds: ['J.D.', 'B.S.'],
+    bio: "Thomas Franklin (\"Tom\") is a founding partner of the firm. He focuses his practice on patent prosecution, licensing, and intellectual capital management with 30 years of experience. Tom is expert in portfolio management, IP audits, due diligence, and strategic planning processes. Through an IP Asset Management plan, he tailors strategy to business goals, competitive pressures, and funding constraints to leverage intangible assets with intellectual property. As an entrepreneur, Tom has developed a client-facing patent portfolio management tool, Triangle IP, that allows a company to understand and manage their patent portfolio. Tom uses IP protection to maintain the dominance of large companies and assist emerging enterprises who are vying to dominate. Tom is widely recognized by Chambers USA, The Best Lawyers in America®, Legal 500 US for Patent Prosecution. Awards include a Managing Intellectual Property magazine IP Star, a Colorado Super Lawyer, Lexology and the International Law Office Client Choice Award USA & Canada, a top patent practitioner by IAM Patent 1000, and a top strategist in IAM Strategy 300. He was honored by Law Week Colorado to its \"Barrister's Best\" list as the \"People's Choice\" for Best IP Non-Litigator and named a Lawyer of the Year in 2012 by Law Week Colorado for the successful effort to bring a Regional Patent and Trademark Office to the Rocky Mountain Region in Denver to fulfill his vision of a nationwide workforce of the brightest and best examiners. The San Diego State University Alumni Association recognized and honored Tom with the 2014 Distinguished Alumni Award from the College of Engineering. Before entering the field of law, Tom spent nine years working in semiconductor fabrication and digital design for wireless data links as a Senior Engineer in the defense industry. Tom's technical experience broadly covers the areas of software, AI, health tech, blockchain, Internet technology, IT security, fintech, content delivery, business methods, clean tech, circuit design, imaging arrays, cryptographic design, telecommunications, electronic design tools, wireless communications, networking, and telemetry systems."
+  },
+  {
+    name: 'Chad Clark',
+    role: 'Partner',
+    creds: ['J.D.', 'M.A.', 'B.S.'],
+    bio: "Chad Clark's practice encompasses patent and trademark prosecution, licensing, and government contract intellectual property. Drawing on more than 25 years of combined legal and military experience, he helps innovative and emerging businesses strategically deploy their IP to secure competitive advantage in both commercial and U.S. Government markets. Chad's technical expertise spans mechanical, electrical, and software disciplines, including artificial intelligence applications, medical devices, communications, position, navigation, and timing (PNT), additive manufacturing, and unmanned aerial vehicles. His government contracting experience includes matters involving the DoD, NASA, NOAA, and FDA. A graduate of the United States Air Force Academy with a Bachelor of Science degree, Chad served ten years as an Air Force pilot, flying special-mission reconnaissance aircraft around the world. He earned his law degree from Stanford Law School, where he studied intellectual property law and served as an editor of the Stanford Law Review. Chad began his legal career with Vorys, Sater, Seymour and Pease LLP in Cincinnati as a business litigation associate, gaining valuable experience in complex commercial disputes. He then co-founded Clark Business & Health Law, establishing an Ohio office where he developed an intellectual property practice focused on patent drafting, prosecution, and IP strategy for emerging biotech and healthcare companies. His work included patent drafting across diverse technologies, trademark registration, licensing, and counseling on research collaborations and transactional matters. His success with early biotech clients led to his appointment as Vice President of Intellectual Property at Eccrine Systems, Inc., a medical wearables startup. There, he developed and executed the company's IP strategy and drafted patent applications spanning physiology, electrochemical sensing, electronics, and software. As the company grew to more than 50 employees, Chad became its General Counsel, overseeing corporate contracts, licensing, product launches, HR, and governance. In 2020, Chad joined Martensen IP, a Colorado Springs-based boutique intellectual property firm, where he continued his patent prosecution practice, became a shareholder, and served as the firm's financial officer. With Mughal, Gaudry & Franklin, P.C., Chad leverages his broad technical background, business insight, and government experience to deliver strategic counsel to technology innovators. His work reflects a lifelong commitment to excellence, attention to detail, and integrity in service to his clients. Chad is involved in the National Resources Defense Council and American Civil Liberties Union."
   }
 ];
 
-const team = [
+const attorneysEngineers = [
+  {
+    name: 'Sherif Mahmoud',
+    role: 'Patent Attorney',
+    creds: ['J.D.', 'B.S.'],
+    bio: "Sherif Mahmoud focuses his practice on patent prosecution. Sherif's experience includes drafting and prosecuting hundreds of U.S. and foreign patents. The patents involve electrical and software technologies, including online marketplace systems, artificial intelligence, machine learning and neural network designs, 5G/5G+ standard essential patents, processors (hardware, firmware, chiplets), semiconductors (design & fabrication), embedded systems, engineering hardware, integrated circuit designs, autonomous vehicles, mobile software applications, and cloud computing. Sherif also has experience prosecuting Post Grant Proceedings, including Inter Partes Review and Ex Parte Reexamination, conducting video interviews, and preparing detailed Office Action responses. In addition, he has prepared due diligence reports, infringement analysis opinions, claim charts, patent landscape analysis, and freedom to operate analysis in US and foreign markets. Prior to his patent practice, Sherif spent almost a decade in the field of electrical engineering. He developed, maintained, and documented hardware and software for an unmanned aerial vehicle and for semiconductor test equipment. Sherif received his J.D. from Illinois Institute of Technology – Kent College of Law and a Bachelor of Science in Electrical Engineering with a minor in Computer Science from University of Illinois at Urbana-Champaign. He is also fluent in English and Arabic."
+  },
+  {
+    name: 'Uday Shah',
+    role: 'Patent Engineer',
+    creds: ['Ph.D.', 'J.D.'],
+    bio: "Uday is a patent engineer with the firm and holds a J.D from Lewis and Clark Law School. Prior to joining Mughal IP, Uday worked as a plasma etch engineer and as an integration engineer in Components Research at Intel Corporation for over 14 years. While at components research, Uday focused on developing novel plasma etch solutions for a wide variety of programs in the areas of transistors (Hi-K metal gate, Tri-Gate, silicon nanowire, III-V and Ge), memory (E-DRAM, Magnetic Tunnel Junction, Floating Body Cell), EUV lithography and directed self-assembly. Uday's integration work focused on developing novel memory devices (Magnetic Tunnel Junction and Resistive Random Access Memory). Uday holds a PhD in engineering science from Rensselaer Polytechnic Institute, Troy, New York, with a focus on high temperature plasma diagnostics. Uday holds over 100 US Patents in the areas of Hi-K metal gate transistors, TriGate transistors, Germanium transistors, III-V transistors, nanowire transistors, optical interconnects, EDRAM memory, magnetic memory, resistive random access memory (RRAM) and floating body cell memory. Uday was awarded an Intel Achievement Award for Tri-Gate Transistor Innovation (Highest Technical Award at Intel), and nine Divisional awards for contributions to Planar/Non-Planar Transistor and Memory research. Uday was also recognized at the Smithsonian Museum's American Enterprise Exhibit for Intel's Tri-Gate Innovation (July 2015)."
+  },
+  {
+    name: 'Ayan Paul',
+    role: 'Patent Agent',
+    creds: ['Ph.D.', 'M.S.', 'B.S.'],
+    bio: "Ayan is a registered Patent Agent with the U.S. Patent and Trademark Office, with experience in patent preparation and prosecution, infringement analysis, and targeted prosecution across domestic and foreign jurisdictions. He has drafted and prosecuted hundreds of patent applications over 19 years in technical areas including computer architecture, power management, networking, memory and cache management, circuits, semiconductors, wireless technologies, artificial intelligence, and machine learning. Ayan received his Bachelor's degree in Electrical Engineering in 1998 from National Institute of Technology, Hamirpur, India, and earned his Ph.D. and Master's degrees in Electrical Engineering from University of Southern California, Los Angeles in 2005. Before graduate studies he worked as an Electrical Engineer in a petrochemicals company in India. Prior to joining the firm, he spent about 19 years at national and boutique intellectual property firms in both in-person and remote roles. Ayan has published extensively in IEEE and other journals and conferences in Electrical Engineering."
+  },
+  {
+    name: 'Scott Gilbert',
+    role: 'Patent Agent',
+    creds: ['Ph.D.', 'M.S.'],
+    bio: "Scott is a patent agent with the firm. He holds a PhD in Chemistry and an MS in Chemical Engineering and has been a researcher for over 25 years across chemistry, physics, and multiple engineering fields, including bioengineering, electronic engineering, software engineering, mechanical engineering, nanotechnology, and microtechnology. Scott has prepared and filed many patent applications across chemical, mechanical/electronic, business methods, and software inventions. He also brings several years of entrepreneurial experience, giving him strong kinship with clients who are turning ideas into reality."
+  },
+  {
+    name: 'Quentin Gaudry',
+    role: 'Patent Engineer',
+    creds: ['Ph.D.', 'B.S.'],
+    bio: "Quentin is a patent engineer in the firm who holds a B.S. in Cellular and Molecular Biology and a Ph.D. in Neuroscience. Prior to joining the firm, he was an Associate Professor of Biology at the University of Maryland, where his lab used genetic, computational, and imaging techniques to study how olfactory signals are encoded in the brain. He taught advanced courses in Diseases of the Nervous System and Cellular Neuroscience and maintained a successful federally funded research program. Quentin also served as a rotating Program Officer for the National Science Foundation in Alexandria, Virginia, overseeing review, funding, and maintenance of a large portfolio of neuroscience grants and projects. He is interested in patent projects at the intersection of biology and computational approaches, including neuromodulation and genetics."
+  },
+  {
+    name: 'Haniya Haque',
+    role: 'Patent Attorney',
+    creds: ['J.D.'],
+    bio: "Haniya practices patent prosecution, advising clients on protecting innovations across a range of technologies. Admitted to practice in Illinois and before the U.S. Patent and Trademark Office, she assists clients through all stages of the patent process, including drafting and filing applications, responding to Office Actions, and addressing examiner rejections. She works closely with inventors and businesses to help them understand and navigate the requirements of the USPTO."
+  },
+  {
+    name: 'Chris Holt',
+    role: 'Patent and Trademark Attorney - Of Counsel',
+    creds: ['J.D.'],
+    bio: "Christopher brings a rich background in intellectual property law, with a recent focus on trademark practice. With over two decades in the field, he has transitioned from a broad patent-and-trademark practice to a specialized emphasis on trademark prosecution, enforcement, and licensing. His expertise in strategic IP management is informed by his pioneering work with Patent Advisor, a company he founded and led to acquisition by LexisNexis. That experience underscores his ability to leverage data and analytics for informed decision-making in IP strategy. Christopher’s dedication to innovation and client success makes him a trusted advisor across IP, especially in the complex landscape of trademark law."
+  },
+  {
+    name: 'Yousouf Farooq',
+    role: 'Patent Engineer',
+    creds: ['B.S.'],
+    bio: "Yousouf is a patent engineer with the firm. He holds a B.S. in Biomedical Engineering with a minor in Computer Science from Georgia Institute of Technology. Yousouf supports attorneys and patent engineers throughout the patent preparation and prosecution process, with a focus on technologies involving artificial intelligence and biomedical applications. His responsibilities include assisting with patent drafting, claim development, technical analysis, office action preparation, and related documentation. Prior to joining Mughal Gaudry & Franklin, Yousouf gained hands-on experience in medical device design, machine learning, and technical writing through academic research and applied engineering projects."
+  }
+];
+
+const supportStaff = [
+  {
+    name: 'Katherine Campbell',
+    role: 'Manager',
+    creds: ['B.A.', 'Paralegal Cert.'],
+    bio: "Katherine is the Office Manager and paralegal for the firm. She brings over 17 years of intellectual property experience and has an extensive understanding of patent prosecution. Her duties include client and portfolio management and oversight of patent workflow, including communications, status reporting, budgeting, and forecasting. She trains and supervises IP paralegals and promotes best practices for patent procedures. Katherine monitors USPTO rule changes and maintains strong knowledge of USPTO, PCT, and WIPO rules and systems. She manages patent annuities and maintenance fees, conducts legal research, and collaborates with IT to maintain websites and implement strategic, technological, and operational improvements for the firm."
+  },
   {
     name: 'Phoebe Young',
     role: 'Paralegal',
-    creds: 'B.A.',
-    bio: 'Phoebe specializes in docketing management, USPTO filings, and administrative legal support, bringing precise detail to file maintenance.'
+    creds: ['B.A.'],
+    bio: "Phoebe brings over 10 years of patent prosecution experience and supports partners, attorneys, and patent agents. She prepares, files, and prosecutes US patent applications; drafts IDS, declaration, and assignment documents; and coordinates foreign filings. Phoebe oversees docket data entry, monitors attorney docket reports, maintains comprehensive records, and compiles details on upcoming actions. She creates and maintains client files, prepares correspondence, and performs post-allowance reviews to ensure accuracy, handling complex matters on tight deadlines."
   },
   {
     name: 'Dana Montgomery',
     role: 'Paralegal',
-    creds: 'B.A.',
-    bio: 'Dana brings over 13 years of patent prosecution experience and supports partners, attorneys, and patent agents. She prepares, files, and prosecutes US patent applications; drafts IDS, declaration, and assignment documents; and coordinates foreign filings. Dana oversees docket data entry, monitors attorney docket reports, maintains comprehensive records, and compiles details on upcoming actions.'
+    creds: ['B.A.'],
+    bio: "Dana brings over 13 years of patent prosecution experience and supports partners, attorneys, and patent agents. She prepares, files, and prosecutes US patent applications; drafts IDS, declaration, and assignment documents; and coordinates foreign filings. Dana oversees docket data entry, monitors attorney docket reports, maintains comprehensive records, and compiles details on upcoming actions. She creates and maintains client files, prepares correspondence, and performs post-allowance reviews to ensure accuracy, handling complex matters on tight deadlines."
   },
   {
     name: 'Alanna Woods',
     role: 'Trademark Paralegal',
-    creds: 'B.S.',
-    bio: 'Alanna is a Trademark Paralegal who supports the firm\'s trademark practice, focusing on prosecution, maintenance, and portfolio management. She assist attorneys with trademark filings, docket management, searches, document preparation, and client communications.'
+    creds: ['B.S.'],
+    bio: "Alanna is a Trademark Paralegal who supports the firm's trademark practice, focusing on prosecution, maintenance, and portfolio management. After earning her bachelor's degree in criminal justice, she worked as a 911 dispatcher and police officer before transitioning into Intellectual Property Law. Alanna has since completed her paralegal certification and now works exclusively with trademarks, assisting attorneys with trademark filings, docket management, searches, document preparation, and client communications."
   },
   {
     name: 'Joanna Cummings',
     role: 'Paralegal Assistant',
-    creds: 'B.Mus.',
-    bio: 'Joanna is brand new to intellectual property law with a background in music and administrative support. She has a bachelor\'s in music and 12 years of private teaching experience after building a full-time private studio. She also brings experience in clinic administration, insurance, and bookkeeping. Joanna assists with accurate docket entry, closely monitors attorney docket reports, maintains comprehensive records, and compiles information about upcoming actions.'
+    creds: ['B.Mus.'],
+    bio: "Joanna is brand new to intellectual property law with a background in music and administrative support. She has a bachelor's in music and 12 years of private teaching experience after building a full-time private studio. She also brings experience in clinic administration, insurance, and bookkeeping. Her love for grammar and English led her to earn certification to teach English as a foreign language online. Joanna assists with accurate docket entry, closely monitors attorney docket reports, maintains comprehensive records, and compiles information about upcoming actions. She creates and maintains client files, prepares correspondence, and provides post-allowance reviews of patents to ensure accuracy, bringing attentive detail to every client."
   },
   {
     name: 'Zahra Baloch',
     role: 'Chief People Officer',
-    creds: 'M.P.H. | B.S.',
-    bio: 'Zahra is the Chief People Officer for the firm. She manages day-to-day human resources, benefits, and payroll, ensuring employees are paid on time and obligations are handled promptly. Prior to joining MGF, she worked at Oregon Health Sciences University and the North West Health Foundation.'
+    creds: ['MPH', 'B.S.'],
+    bio: "Zahra is the Chief People Officer for the firm. She manages day-to-day human resources, benefits, and payroll, ensuring employees are paid on time and obligations are handled promptly. Prior to joining MGF, she worked at Oregon Health Sciences University and the North West Health Foundation."
   },
   {
     name: 'Mahin Mughal',
     role: 'Law Intern',
-    creds: 'J.D. | B.S.',
-    bio: 'Mahin is a law intern at MGF who manages the firm\'s social media presence and assists with administrative and paralegal tasks. She is an avid reader and writer whose novel _Badlands_ is available on Amazon, and she aspires to become an attorney.'
+    creds: ['J.D.', 'B.S.'],
+    bio: "Mahin is a law intern at MGF who manages the firm's social media presence and assists with administrative and paralegal tasks. She is an avid reader and writer whose novel Badlands is available on Amazon, and she aspires to become an attorney."
   }
+];
+
+const memberships = [
+  'Lewis & Clark Law School',
+  'North Carolina State University',
+  'Stanford University',
+  'U.S. Air Force',
+  'UC San Diego',
+  'Harvard University',
+  'University Of San Diego',
+  'USC'
 ];
 ---
 
-<Layout title="About Us | MGF Law">
+<Layout title="Meet the Team | MGF Law">
+  <style is:inline>
+    .perspective-1000 {
+      perspective: 1000px;
+    }
+    .transform-style-3d {
+      transform-style: preserve-3d;
+    }
+    .backface-hidden {
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+    }
+    .rotate-y-180 {
+      transform: rotateY(180deg);
+    }
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 4px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: rgba(10, 15, 29, 0.6);
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #c5a880;
+      border-radius: 4px;
+    }
+  </style>
+
   <div class="min-h-screen bg-[#0A0F1D] text-white selection:bg-[#c5a880] selection:text-[#0A0F1D] pb-16">
-    <!-- Header Hero -->
-    <section class="border-b border-[#c5a880]/10 bg-[#070b16] py-16 text-center space-y-4">
-      <div class="container mx-auto px-4 max-w-4xl">
-        <span class="text-xs font-bold uppercase tracking-widest text-[#c5a880]">Our Firm</span>
-        <h1 class="text-4xl sm:text-5xl font-serif text-white leading-tight">About MGF Law</h1>
-        <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-          MGF Law's solution-driven outlook is the product of an innovative, collaborative, and diverse culture.
+    <!-- Hero Header -->
+    <section class="border-b border-[#c5a880]/10 bg-[#070b16] py-20 text-center space-y-4">
+      <div class="container mx-auto px-4 max-w-4xl space-y-4">
+        <span class="text-xs font-bold uppercase tracking-widest text-[#c5a880]">Our People</span>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-serif text-white leading-tight font-light">
+          Meet the <span class="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#c5a880] to-[#e4d4b1]">Team</span>
+        </h1>
+        <p class="text-slate-300 text-sm sm:text-base max-w-3xl mx-auto leading-relaxed font-sans">
+          The diverse expertise of our team matches our diverse client base. Our knowledge encompasses decades of experience accrued across a range of practice areas, spanning the intellectual property industry and related technology sectors.
         </p>
       </div>
     </section>
 
-    <!-- Firm History/Details -->
-    <section class="container mx-auto px-4 py-20 max-w-4xl space-y-8 font-sans">
-      <h2 class="text-2xl sm:text-3xl font-serif text-white border-b border-[#c5a880]/10 pb-4">Mughal Gaudry & Franklin PC</h2>
-      <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
-        Mughal Gaudry & Franklin PC (DBA ImpactPatents.com) is a minority-owned, diverse, highly sophisticated, and result and client-oriented boutique intellectual property (IP) law firm. We bring decades of collective engineering experience to protect our client's cutting edge technological innovations. We also bring decades of collective patent law experience including law firm experiences.
-      </p>
-      <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
-        We specialize in electrical and computer engineering arts, and mechanical arts including semiconductor process, semiconductor packaging, semiconductor tools, circuits, software, optics, memories, batteries, chemical arts, artificial intelligence, fin-tech, business methods, cross-section of bio-tech and AI, and emerging technologies. Our practitioners have years of engineering experience, and advanced engineering and science degrees.
-      </p>
-      <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
-        Our staff is experienced in all facets of patent preparation and prosecution. Our staff assists with budget forecasting for clients upon request. We have engagements with preferred foreign counsels in Europe, China, Taiwan, Australia, South Korea, etc. As such, we manage foreign filings and prosecution for our clients.
-      </p>
-      <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
-        Mughal Gaudry & Franklin PC has assembled an amazing exclusive back office team of patent engineers, patent analysts, draft persons, and quality engineers with top technical backgrounds that are focused on spending the time necessary to deliver the highest quality prosecution work product under the close supervision of licensed patent prosecutors.
-      </p>
-    </section>
-
-    <!-- Meet the Founders -->
-    <section class="container mx-auto px-4 py-12 max-w-4xl space-y-16">
-      <h2 id="professionals" class="text-2xl sm:text-3xl font-serif text-white border-b border-[#c5a880]/10 pb-4 text-center">Meet the Partners</h2>
+    <!-- Main Team Sections -->
+    <div class="container mx-auto px-4 py-16 max-w-5xl space-y-24 font-sans">
       
-      <div class="space-y-16">
-        {founders.map((founder) => (
-          <div class="bg-[#12192c] border border-[#c5a880]/10 p-8 rounded-2xl space-y-4 shadow">
-            <div class="flex items-center gap-4 border-b border-[#c5a880]/10 pb-4">
-              <div class="w-14 h-14 rounded-full bg-[#c5a880]/10 flex items-center justify-center font-serif text-[#c5a880] text-lg font-bold border border-[#c5a880]/20 shrink-0">
-                {founder.name.split(' ').map(n => n[0]).join('')}
-              </div>
-              <div>
-                <h3 class="text-xl font-bold text-white font-serif leading-snug">{founder.name}</h3>
-                <p class="text-xs font-semibold text-[#c5a880] uppercase tracking-wider">{founder.role}</p>
-                <p class="text-[10px] text-slate-400 mt-0.5">{founder.creds}</p>
+      <!-- 1. PARTNERS SECTION -->
+      <section id="partners" class="space-y-8">
+        <div class="border-b border-[#c5a880]/15 pb-4">
+          <h2 class="text-2xl sm:text-3xl font-serif text-[#c5a880] font-semibold tracking-wide">
+            Partners
+          </h2>
+          <p class="text-xs text-slate-400 mt-1">Hover over any card or photo to flip and view full biography</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {partners.map((person) => (
+            <div class="team-card group perspective-1000 h-[480px] w-full cursor-pointer">
+              <div class="card-inner relative w-full h-full duration-700 transform-style-3d transition-transform group-hover:rotate-y-180">
+                
+                <!-- FRONT OF CARD -->
+                <div class="card-front absolute inset-0 w-full h-full backface-hidden rounded-2xl bg-[#12192c] border border-[#c5a880]/15 p-8 flex flex-col justify-between shadow-xl">
+                  <div class="space-y-6">
+                    <div class="flex items-center justify-between">
+                      <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#c5a880]/20 to-[#12192c] flex items-center justify-center font-serif text-[#c5a880] text-2xl font-bold border border-[#c5a880]/30 shadow-inner">
+                        {person.name.split(' ').map(n => n[0]).join('')}
+                      </div>
+                      <div class="flex flex-wrap gap-1.5 justify-end">
+                        {person.creds.map((cred) => (
+                          <span class="px-2.5 py-1 text-[11px] font-bold rounded-md bg-[#0A0F1D] border border-[#c5a880]/20 text-[#c5a880]">
+                            {cred}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div class="space-y-2">
+                      <h3 class="text-2xl font-bold text-white font-serif">{person.name}</h3>
+                      <p class="text-xs font-semibold text-[#c5a880] uppercase tracking-wider">{person.role}</p>
+                    </div>
+
+                    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed line-clamp-4">
+                      {person.bio}
+                    </p>
+                  </div>
+
+                  <div class="pt-4 border-t border-[#c5a880]/10 flex items-center justify-between">
+                    <span class="inline-flex items-center gap-1.5 text-xs font-bold text-[#c5a880] group-hover:underline">
+                      View Profile <span>↻</span>
+                    </span>
+                    <span class="text-[10px] text-slate-400 uppercase tracking-widest font-semibold">Hover to Flip</span>
+                  </div>
+                </div>
+
+                <!-- BACK OF CARD (FLIPPED) -->
+                <div class="card-back absolute inset-0 w-full h-full backface-hidden rotate-y-180 rounded-2xl bg-[#0d1424] border border-[#c5a880]/35 p-6 sm:p-8 flex flex-col justify-between shadow-2xl overflow-hidden">
+                  <div class="space-y-3 flex-1 flex flex-col min-h-0">
+                    <div class="border-b border-[#c5a880]/15 pb-3">
+                      <div class="flex items-center justify-between">
+                        <h4 class="text-lg font-bold text-white font-serif">{person.name}</h4>
+                        <div class="flex gap-1">
+                          {person.creds.map((cred) => (
+                            <span class="text-[10px] font-bold text-[#c5a880] bg-[#c5a880]/10 px-1.5 py-0.5 rounded">
+                              {cred}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      <p class="text-[10px] text-[#c5a880] uppercase font-semibold tracking-wider mt-0.5">{person.role}</p>
+                    </div>
+
+                    <!-- Scrollable Bio -->
+                    <div class="overflow-y-auto custom-scrollbar flex-1 pr-2 space-y-2.5 text-xs text-slate-300 leading-relaxed">
+                      <p>{person.bio}</p>
+                    </div>
+                  </div>
+
+                  <div class="pt-3 border-t border-[#c5a880]/10 flex items-center justify-between shrink-0">
+                    <a href="/contact" class="text-xs font-bold text-[#c5a880] hover:underline flex items-center gap-1">
+                      Consult with {person.name.split(' ')[0]} <span>→</span>
+                    </a>
+                    <span class="text-[10px] text-slate-400 uppercase tracking-widest font-semibold">Flip ↺</span>
+                  </div>
+                </div>
+
               </div>
             </div>
-            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-sans">{founder.bio}</p>
-          </div>
-        ))}
-      </div>
-    </section>
+          ))}
+        </div>
+      </section>
 
-    <!-- Meet the Support Team -->
-    <section class="container mx-auto px-4 py-16 max-w-4xl space-y-12">
-      <h2 class="text-2xl sm:text-3xl font-serif text-white border-b border-[#c5a880]/10 pb-4 text-center">Team & Associates</h2>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {team.map((member) => (
-          <div class="bg-[#12192c]/60 border border-[#c5a880]/5 p-6 rounded-xl space-y-3 shadow-sm hover:border-[#c5a880]/20 transition-all">
-            <div class="flex items-center gap-3 border-b border-[#c5a880]/5 pb-3">
-              <div class="w-10 h-10 rounded-full bg-[#c5a880]/5 flex items-center justify-center font-serif text-[#c5a880] text-sm font-bold border border-[#c5a880]/10 shrink-0">
-                {member.name.split(' ').map(n => n[0]).join('')}
-              </div>
-              <div>
-                <h3 class="text-base font-bold text-white font-serif">{member.name}</h3>
-                <p class="text-[10px] font-semibold text-[#c5a880] uppercase tracking-wider">{member.role}</p>
+      <!-- 2. ATTORNEYS AND ENGINEERS SECTION -->
+      <section id="attorneys-engineers" class="space-y-8">
+        <div class="border-b border-[#c5a880]/15 pb-4">
+          <h2 class="text-2xl sm:text-3xl font-serif text-[#c5a880] font-semibold tracking-wide">
+            Attorneys and Engineers
+          </h2>
+          <p class="text-xs text-slate-400 mt-1">Specialized engineering backgrounds spanning computing, biomedical, physics, and chemistry</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {attorneysEngineers.map((person) => (
+            <div class="team-card group perspective-1000 h-[480px] w-full cursor-pointer">
+              <div class="card-inner relative w-full h-full duration-700 transform-style-3d transition-transform group-hover:rotate-y-180">
+                
+                <!-- FRONT OF CARD -->
+                <div class="card-front absolute inset-0 w-full h-full backface-hidden rounded-2xl bg-[#12192c] border border-[#c5a880]/15 p-8 flex flex-col justify-between shadow-xl">
+                  <div class="space-y-6">
+                    <div class="flex items-center justify-between">
+                      <div class="w-20 h-20 rounded-2xl bg-gradient-to-br from-[#c5a880]/20 to-[#12192c] flex items-center justify-center font-serif text-[#c5a880] text-2xl font-bold border border-[#c5a880]/30 shadow-inner">
+                        {person.name.split(' ').map(n => n[0]).join('')}
+                      </div>
+                      <div class="flex flex-wrap gap-1.5 justify-end">
+                        {person.creds.map((cred) => (
+                          <span class="px-2.5 py-1 text-[11px] font-bold rounded-md bg-[#0A0F1D] border border-[#c5a880]/20 text-[#c5a880]">
+                            {cred}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div class="space-y-2">
+                      <h3 class="text-2xl font-bold text-white font-serif">{person.name}</h3>
+                      <p class="text-xs font-semibold text-[#c5a880] uppercase tracking-wider">{person.role}</p>
+                    </div>
+
+                    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed line-clamp-4">
+                      {person.bio}
+                    </p>
+                  </div>
+
+                  <div class="pt-4 border-t border-[#c5a880]/10 flex items-center justify-between">
+                    <span class="inline-flex items-center gap-1.5 text-xs font-bold text-[#c5a880] group-hover:underline">
+                      View Profile <span>↻</span>
+                    </span>
+                    <span class="text-[10px] text-slate-400 uppercase tracking-widest font-semibold">Hover to Flip</span>
+                  </div>
+                </div>
+
+                <!-- BACK OF CARD (FLIPPED) -->
+                <div class="card-back absolute inset-0 w-full h-full backface-hidden rotate-y-180 rounded-2xl bg-[#0d1424] border border-[#c5a880]/35 p-6 sm:p-8 flex flex-col justify-between shadow-2xl overflow-hidden">
+                  <div class="space-y-3 flex-1 flex flex-col min-h-0">
+                    <div class="border-b border-[#c5a880]/15 pb-3">
+                      <div class="flex items-center justify-between">
+                        <h4 class="text-lg font-bold text-white font-serif">{person.name}</h4>
+                        <div class="flex gap-1">
+                          {person.creds.map((cred) => (
+                            <span class="text-[10px] font-bold text-[#c5a880] bg-[#c5a880]/10 px-1.5 py-0.5 rounded">
+                              {cred}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                      <p class="text-[10px] text-[#c5a880] uppercase font-semibold tracking-wider mt-0.5">{person.role}</p>
+                    </div>
+
+                    <!-- Scrollable Bio -->
+                    <div class="overflow-y-auto custom-scrollbar flex-1 pr-2 space-y-2.5 text-xs text-slate-300 leading-relaxed">
+                      <p>{person.bio}</p>
+                    </div>
+                  </div>
+
+                  <div class="pt-3 border-t border-[#c5a880]/10 flex items-center justify-between shrink-0">
+                    <a href="/contact" class="text-xs font-bold text-[#c5a880] hover:underline flex items-center gap-1">
+                      Consult with {person.name.split(' ')[0]} <span>→</span>
+                    </a>
+                    <span class="text-[10px] text-slate-400 uppercase tracking-widest font-semibold">Flip ↺</span>
+                  </div>
+                </div>
+
               </div>
             </div>
-            <p class="text-xs text-slate-300 leading-relaxed font-sans">{member.bio}</p>
+          ))}
+        </div>
+      </section>
+
+      <!-- 3. SUPPORT STAFF SECTION -->
+      <section id="support-staff" class="space-y-8">
+        <div class="border-b border-[#c5a880]/15 pb-4">
+          <h2 class="text-2xl sm:text-3xl font-serif text-[#c5a880] font-semibold tracking-wide">
+            Support Staff
+          </h2>
+          <p class="text-xs text-slate-400 mt-1">Dedicated paralegals, docketing managers, and operations specialists</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {supportStaff.map((person) => (
+            <div class="team-card group perspective-1000 h-[440px] w-full cursor-pointer">
+              <div class="card-inner relative w-full h-full duration-700 transform-style-3d transition-transform group-hover:rotate-y-180">
+                
+                <!-- FRONT OF CARD -->
+                <div class="card-front absolute inset-0 w-full h-full backface-hidden rounded-2xl bg-[#12192c] border border-[#c5a880]/15 p-6 flex flex-col justify-between shadow">
+                  <div class="space-y-4">
+                    <div class="flex items-center justify-between">
+                      <div class="w-14 h-14 rounded-xl bg-[#c5a880]/10 flex items-center justify-center font-serif text-[#c5a880] text-lg font-bold border border-[#c5a880]/20">
+                        {person.name.split(' ').map(n => n[0]).join('')}
+                      </div>
+                      <div class="flex flex-wrap gap-1 justify-end">
+                        {person.creds.map((cred) => (
+                          <span class="px-2 py-0.5 text-[10px] font-bold rounded bg-[#0A0F1D] border border-[#c5a880]/20 text-[#c5a880]">
+                            {cred}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div>
+                      <h3 class="text-xl font-bold text-white font-serif">{person.name}</h3>
+                      <p class="text-xs font-semibold text-[#c5a880] uppercase tracking-wider">{person.role}</p>
+                    </div>
+
+                    <p class="text-xs text-slate-300 leading-relaxed line-clamp-4">
+                      {person.bio}
+                    </p>
+                  </div>
+
+                  <div class="pt-3 border-t border-[#c5a880]/10 flex items-center justify-between">
+                    <span class="text-xs font-bold text-[#c5a880] group-hover:underline">
+                      View Profile ↻
+                    </span>
+                    <span class="text-[9px] text-slate-400 uppercase font-semibold">Hover to Flip</span>
+                  </div>
+                </div>
+
+                <!-- BACK OF CARD (FLIPPED) -->
+                <div class="card-back absolute inset-0 w-full h-full backface-hidden rotate-y-180 rounded-2xl bg-[#0d1424] border border-[#c5a880]/30 p-6 flex flex-col justify-between shadow-xl overflow-hidden">
+                  <div class="space-y-2 flex-1 flex flex-col min-h-0">
+                    <div class="border-b border-[#c5a880]/15 pb-2">
+                      <h4 class="text-base font-bold text-white font-serif">{person.name}</h4>
+                      <p class="text-[10px] text-[#c5a880] uppercase font-semibold tracking-wider">{person.role}</p>
+                    </div>
+
+                    <!-- Scrollable Bio -->
+                    <div class="overflow-y-auto custom-scrollbar flex-1 pr-1 space-y-2 text-xs text-slate-300 leading-relaxed">
+                      <p>{person.bio}</p>
+                    </div>
+                  </div>
+
+                  <div class="pt-2 border-t border-[#c5a880]/10 flex items-center justify-between shrink-0">
+                    <span class="text-[10px] text-slate-400 uppercase font-semibold">MGF Law Staff</span>
+                    <span class="text-[10px] text-[#c5a880] font-bold">Flip ↺</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- 4. QUOTE BLOCK -->
+      <section class="bg-gradient-to-r from-[#12192c] via-[#1a233d] to-[#12192c] border border-[#c5a880]/20 rounded-3xl p-8 sm:p-12 text-center relative overflow-hidden shadow-2xl">
+        <div class="absolute -top-6 left-1/2 -translate-x-1/2 text-8xl font-serif text-[#c5a880]/10 select-none pointer-events-none">
+          “
+        </div>
+        <div class="relative z-10 max-w-3xl mx-auto space-y-6">
+          <p class="text-lg sm:text-2xl font-serif text-white italic leading-relaxed">
+            “We have engineering experience and knowledge to evaluate your patent portfolio. You work to unique requirements. We offer unique solutions.”
+          </p>
+          <div class="space-y-1">
+            <h4 class="text-base font-bold text-[#c5a880] uppercase tracking-wider">Usman Mughal</h4>
+            <p class="text-xs text-slate-400 font-medium">Co-Founder, Patent Attorney, Shareholder</p>
           </div>
-        ))}
-      </div>
-    </section>
+        </div>
+      </section>
+
+      <!-- 5. MEMBERSHIPS & TRUSTED INSTITUTIONS -->
+      <section class="space-y-8 pt-4">
+        <div class="text-center space-y-2 max-w-2xl mx-auto">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#c5a880]">Our Memberships & Background</span>
+          <h2 class="text-2xl sm:text-3xl font-serif text-white">Distinguished Credentials</h2>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Our professionals are registered with the USPTO and maintain active memberships in leading intellectual property organizations, ensuring we stay at the forefront of patent law developments and best practices.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 items-center justify-items-center">
+          {memberships.map((inst) => (
+            <div class="w-full bg-[#12192c] border border-[#c5a880]/10 rounded-xl p-4 text-center hover:border-[#c5a880]/30 transition-all shadow-sm">
+              <span class="text-xs sm:text-sm font-bold text-slate-200 font-serif block">{inst}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <!-- 6. CONTACT CTA -->
+      <section class="border-t border-[#c5a880]/15 pt-16 text-center space-y-6">
+        <h3 class="text-3xl sm:text-4xl font-serif text-white font-light">
+          Protect Your Innovations Globally
+        </h3>
+        <p class="text-xs sm:text-sm text-slate-300 max-w-md mx-auto leading-relaxed">
+          Speak with our team of specialized patent attorneys and engineers today.
+        </p>
+        <div class="pt-2">
+          <a href="/contact" class="inline-block px-8 py-4 rounded-lg bg-[#c5a880] text-[#0A0F1D] hover:bg-[#b0936b] transition-all font-extrabold text-sm tracking-wider uppercase shadow-lg shadow-[#c5a880]/10 hover:scale-[1.02] active:scale-[0.98]">
+            TALK TO US
+          </a>
+        </div>
+      </section>
+
+    </div>
   </div>
+
+  <script is:inline>
+    // Enable touch / click toggle for mobile devices
+    function initCardFlips() {
+      const cards = document.querySelectorAll('.team-card');
+      cards.forEach(card => {
+        card.addEventListener('click', (e) => {
+          // If clicked a link inside the card back, allow normal navigation
+          if (e.target.tagName === 'A' || e.target.closest('a')) return;
+          const inner = card.querySelector('.card-inner');
+          if (inner) {
+            inner.classList.toggle('rotate-y-180');
+          }
+        });
+      });
+    }
+
+    document.addEventListener('astro:page-load', initCardFlips);
+    initCardFlips();
+  </script>
 </Layout>
