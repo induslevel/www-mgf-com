@@ -18,9 +18,98 @@ import ThemeToggle from './ThemeToggle.astro';
     <nav class="hidden lg:flex items-center gap-1 xl:gap-2">
       <a href="/about-us" class="text-xs xl:text-sm font-semibold text-slate-300 hover:text-[#c5a880] px-2.5 py-2 rounded-lg transition-all">ABOUT US</a>
       <a href="/about-us#professionals" class="text-xs xl:text-sm font-semibold text-slate-300 hover:text-[#c5a880] px-2.5 py-2 rounded-lg transition-all">OUR PEOPLE</a>
-      <a href="/services" class="text-xs xl:text-sm font-semibold text-slate-300 hover:text-[#c5a880] px-2.5 py-2 rounded-lg transition-all">SERVICES</a>
       
-      <!-- Technologies Dropdown -->
+      <!-- Services Dropdown on Hover -->
+      <div class="relative group">
+        <a href="/services" class="flex items-center gap-1 text-xs xl:text-sm font-semibold text-slate-300 group-hover:text-[#c5a880] px-2.5 py-2 rounded-lg transition-all">
+          <span>SERVICES</span>
+          <svg class="w-3.5 h-3.5 text-slate-400 group-hover:text-[#c5a880] group-hover:rotate-180 transition-transform duration-200" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+          </svg>
+        </a>
+        
+        <!-- Services Multi-Column Dropdown Menu -->
+        <div class="absolute left-0 top-full pt-2 hidden group-hover:block z-50 min-w-[540px]">
+          <div class="bg-[#12192c] border border-[#c5a880]/20 rounded-2xl shadow-2xl p-5 backdrop-blur-md space-y-4">
+            <div class="grid grid-cols-3 gap-4 text-xs">
+              
+              <!-- Column 1: Preparation & Filing -->
+              <div class="space-y-2">
+                <span class="text-[10px] font-bold text-[#c5a880] uppercase tracking-wider block border-b border-[#c5a880]/15 pb-1">
+                  Prep & Filing
+                </span>
+                <div class="space-y-1">
+                  <a href="/services/foreign-patent-prosecution" class="block px-2 py-1 rounded text-slate-300 hover:text-white hover:bg-[#c5a880]/15 transition-all">
+                    Foreign Prosecution
+                  </a>
+                  <a href="/services/patent-preparation" class="block px-2 py-1 rounded text-slate-300 hover:text-white hover:bg-[#c5a880]/15 transition-all">
+                    Patent Preparation
+                  </a>
+                  <a href="/services/patent-prosecution" class="block px-2 py-1 rounded text-slate-300 hover:text-white hover:bg-[#c5a880]/15 transition-all">
+                    Patent Prosecution
+                  </a>
+                  <a href="/services/trademark-services" class="block px-2 py-1 rounded text-slate-300 hover:text-white hover:bg-[#c5a880]/15 transition-all">
+                    Trademark Services
+                  </a>
+                </div>
+              </div>
+
+              <!-- Column 2: Post-Grant & Proceedings -->
+              <div class="space-y-2">
+                <span class="text-[10px] font-bold text-[#c5a880] uppercase tracking-wider block border-b border-[#c5a880]/15 pb-1">
+                  Post-Grant
+                </span>
+                <div class="space-y-1">
+                  <a href="/services/opinions" class="block px-2 py-1 rounded text-slate-300 hover:text-white hover:bg-[#c5a880]/15 transition-all">
+                    Legal Opinions
+                  </a>
+                  <a href="/services/portfolio-analysis" class="block px-2 py-1 rounded text-slate-300 hover:text-white hover:bg-[#c5a880]/15 transition-all">
+                    Portfolio Analysis
+                  </a>
+                  <a href="/services/pto-proceedings-aia" class="block px-2 py-1 rounded text-slate-300 hover:text-white hover:bg-[#c5a880]/15 transition-all">
+                    PTO Proceedings (AIA)
+                  </a>
+                  <a href="/services/reexamination-reissue" class="block px-2 py-1 rounded text-slate-300 hover:text-white hover:bg-[#c5a880]/15 transition-all">
+                    Reexamination & Reissue
+                  </a>
+                </div>
+              </div>
+
+              <!-- Column 3: Strategy & Commercialization -->
+              <div class="space-y-2">
+                <span class="text-[10px] font-bold text-[#c5a880] uppercase tracking-wider block border-b border-[#c5a880]/15 pb-1">
+                  Strategy & IP
+                </span>
+                <div class="space-y-1">
+                  <a href="/services/business-counseling-services" class="block px-2 py-1 rounded text-slate-300 hover:text-white hover:bg-[#c5a880]/15 transition-all">
+                    Business Counseling
+                  </a>
+                  <a href="/services/freedom-to-operate" class="block px-2 py-1 rounded text-slate-300 hover:text-white hover:bg-[#c5a880]/15 transition-all">
+                    Freedom to Operate
+                  </a>
+                  <a href="/services/ip-rights-government-contracts" class="block px-2 py-1 rounded text-slate-300 hover:text-white hover:bg-[#c5a880]/15 transition-all">
+                    Government Contracts
+                  </a>
+                  <a href="/services/licensing-litigation-support" class="block px-2 py-1 rounded text-slate-300 hover:text-white hover:bg-[#c5a880]/15 transition-all">
+                    Licensing & Litigation
+                  </a>
+                </div>
+              </div>
+
+            </div>
+
+            <div class="border-t border-[#c5a880]/10 pt-2 flex items-center justify-between">
+              <span class="text-[11px] text-slate-400">12 Specialized Practice Areas</span>
+              <a href="/services" class="text-[11px] font-bold text-[#c5a880] hover:underline flex items-center gap-1">
+                <span>View All Services</span>
+                <span>→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Technologies Dropdown on Hover -->
       <div class="relative group">
         <a href="/technologies" class="flex items-center gap-1 text-xs xl:text-sm font-semibold text-slate-300 group-hover:text-[#c5a880] px-2.5 py-2 rounded-lg transition-all">
           <span>TECHNOLOGIES</span>
@@ -29,7 +118,7 @@ import ThemeToggle from './ThemeToggle.astro';
           </svg>
         </a>
         
-        <!-- Dropdown Menu on hover -->
+        <!-- Technologies Dropdown Menu -->
         <div class="absolute left-0 top-full pt-2 hidden group-hover:block z-50 min-w-[280px]">
           <div class="bg-[#12192c] border border-[#c5a880]/20 rounded-xl shadow-2xl p-2.5 space-y-1 backdrop-blur-md">
             <a href="/technologies/artificial-intelligence" class="block px-3 py-2 rounded-lg text-xs font-semibold text-slate-300 hover:text-white hover:bg-[#c5a880]/15 transition-all">

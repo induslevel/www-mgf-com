@@ -1,157 +1,379 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 
-const serviceCategories = [
+const services = [
   {
-    name: "Preparation & Filing",
-    description: "Expert preparation and prosecution of patent and trademark applications to secure your global rights.",
-    services: [
+    "slug": "foreign-patent-prosecution",
+    "title": "Foreign Patent Prosecution",
+    "category": "Preparation & Filing",
+    "shortDesc": "Every country has its own Patent laws and rules. We ensure consistent prosecution of foreign matters aligned with your US strategy.",
+    "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200",
+    "overview": "Every country has its own Patent laws and rules. We have successfully prosecuted patent applications in China, Japan, European Union, India, South Korea, Australia, and other countries. We partner with expert foreign patent attorneys to navigate the complex foreign patent laws and rules. We ensure that patent prosecution of your foreign matters is consistent with your US prosecution.",
+    "sections": [
       {
-        slug: "foreign-patent-prosecution",
-        title: "Foreign Patent Prosecution",
-        desc: "Every country has its own Patent laws and rules. We ensure consistent prosecution of foreign matters aligned with your US strategy.",
-        image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1000"
+        "heading": "Portfolio Management Perspective",
+        "content": "Drawing on experience managing global portfolios for major semiconductor and tech companies, we approach foreign prosecution with an eye on the budget and the business goal. We understand that foreign filing costs can balloon quickly. We help you manage this by:\n\n\u2022 Consolidating instructions to reduce administrative overhead with foreign associates.\n\u2022 Strategically deferring costs where possible using PCT timelines and PPH (Patent Prosecution Highway).\n\u2022 Harmonizing claims to ensure your core invention is protected in all key manufacturing and sales hubs without paying for unnecessary coverage in non-critical markets."
       },
       {
-        slug: "patent-preparation",
-        title: "Patent Preparation",
-        desc: "Drafting high-quality applications comprising written descriptions, figures, and claims to deconstruct your technology and build strong protection.",
-        image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=1000"
+        "heading": "When Foreign Filing Makes Sense",
+        "content": "Foreign patent prosecution is usually about aligning IP coverage with your business plan. That can mean protecting key markets, supporting manufacturing or supply chain locations, preserving optionality for licensing, or building leverage in partnership negotiations. We help you decide where to file and why, with a focus on practical, budget-aware coverage."
       },
       {
-        slug: "patent-prosecution",
-        title: "Patent Prosecution",
-        desc: "Active negotiation with the USPTO, utilizing examiner analytics and examiner interviews to carve out the robust monopoly rights you deserve.",
-        image: "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&q=80&w=1000"
+        "heading": "Common Pathways",
+        "content": "We routinely support multiple filing pathways and help pick the one that fits your timing and goals:\n\n\u2022 Paris convention filings: Coordinated national or regional filings based on a priority application.\n\u2022 PCT (international) strategy: A staged approach that can keep options open while you evaluate markets and investors.\n\u2022 Direct national filings: In select cases where speed or country-specific strategy is the priority."
       },
       {
-        slug: "trademark-services",
-        title: "Trademark Services",
-        desc: "Strategic brand clearance, searches, and naming strategy to avoid costly conflicts, followed by active filing and brand policing.",
-        image: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&q=80&w=1000"
+        "heading": "What We Do For You",
+        "content": "Foreign prosecution is a coordination problem as much as it is a legal one. We help by:\n\n\u2022 Setting a consistent claim strategy across jurisdictions, including fallback positions and scope priorities\n\u2022 Coordinating with trusted local counsel for filing, prosecution, and formalities in each country or region\n\u2022 Managing translations and formal requirements and keeping the process predictable\n\u2022 Preparing and reviewing responses to foreign Office Actions, including claim amendments and argument strategy\n\u2022 Keeping the foreign record aligned with your US prosecution goals, without creating unnecessary inconsistencies"
+      },
+      {
+        "heading": "How The Process Works",
+        "content": "1. We start with your goals, products, and target markets, then map them to a filing strategy\n2. We confirm the priority chain and timing, then plan filings around critical deadlines\n3. For each jurisdiction, we coordinate filing instructions, forms, and any translation requirements\n4. As Office Actions arrive, we review the issues, propose options, and coordinate a response with local counsel\n5. We track progress, deadlines, and cost drivers across countries so there are no surprises"
+      },
+      {
+        "heading": "Common Questions",
+        "content": "How do translation and formalities affect scope?\nTranslations and local practice can change how arguments land. We manage this by drafting clear source text, reviewing key translated sections when needed, and aligning claim amendments with local norms while protecting your core scope.\n\nCan foreign prosecution be kept consistent with US strategy?\nYes. The goal is not identical claims everywhere, but a coherent set of claims that match business value, local enforceability, and reasonable prosecution history."
       }
     ]
   },
   {
-    name: "Post-Grant & Proceedings",
-    description: "Defense and correction of existing patent assets, and strategic deflection of third-party patent assertions.",
-    services: [
+    "slug": "patent-preparation",
+    "title": "Patent Preparation",
+    "category": "Preparation & Filing",
+    "shortDesc": "A patent application comprises three main sections\u2013written description, figures, and claims. The written description and figures provide support for the claims.",
+    "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=1200",
+    "overview": "A patent application comprises three main sections\u2013written description, figures, and claims. The written description and figures provide support for the claims. The claims define the boundaries of the desired monopoly rights. We understand your complicated and diverse technologies. We have the technical education and expertise to understand complex inventions in a broad spectrum of technologies, which means we get to the heart of the invention efficiently. This saves time and money.",
+    "sections": [
       {
-        slug: "opinions",
-        title: "Opinions",
-        desc: "Rigorous technical and legal assessments regarding invalidity, non-infringement, and patentability to protect against willful infringement.",
-        image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&q=80&w=1000"
+        "heading": "Engineered Drafting",
+        "content": "Our attorneys are engineers first. With backgrounds at companies like Intel, Lockheed Martin, and L3 Communications, we don't just describe your invention; we deconstruct it. Our drafting process mirrors engineering design:\n\n\u2022 System-Level Architecture: We capture the high-level data flows and block diagrams.\n\u2022 Component-Level Detail: We drill down into the specific circuits, algorithms, or mechanisms.\n\u2022 Implementation Variants: We draft alternative embodiments that anticipate design changes and competitor workarounds."
       },
       {
-        slug: "portfolio-analysis",
-        title: "Portfolio Analysis",
-        desc: "Understanding the strengths and weaknesses of your patent portfolio across different technology areas to align assets to commercial goals.",
-        image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1000"
+        "heading": "Our Drafting Approach",
+        "content": "Strong patent applications are built around clarity and optionality. We focus on capturing the core inventive concepts, multiple implementation paths, and practical claim coverage that matches your product roadmap. That means drafting with:\n\n\u2022 Multiple claim tiers (broad to narrow) and fallback positions\n\u2022 Engineering-aligned terminology that supports consistent interpretation\n\u2022 Alternative embodiments so you are not boxed into a single design\n\u2022 Figure strategy that supports claim breadth and future continuations"
       },
       {
-        slug: "pto-proceedings-aia",
-        title: "PTO Proceedings under the AIA",
-        desc: "Expert representation in USPTO trial venues, including Inter Partes Review (IPR), Post Grant Review (PGR), and Ex Parte Re-Examinations.",
-        image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1000"
+        "heading": "What We Need From You",
+        "content": "To move quickly and keep costs predictable, we typically ask for:\n\n\u2022 A short invention disclosure or design document\n\u2022 System diagrams, flowcharts, block diagrams, or screenshots where relevant\n\u2022 Key advantages and what is new compared to prior approaches\n\u2022 Variations you might ship later, not just the current version"
       },
       {
-        slug: "reexamination-reissue",
-        title: "Reexamination & Reissue",
-        desc: "Post-grant tools to challenge cited patents, broaden existing patent scope, or correct priority and technical defects in issued patents.",
-        image: "https://images.unsplash.com/photo-1447069387593-a5de0862481e?auto=format&fit=crop&q=80&w=1000"
+        "heading": "What You Receive & How The Process Works",
+        "content": "Deliverables include draft applications for review with clear questions and assumptions, proposed claim sets, and filing strategy guidance.\n\n1. We intake the invention and confirm what matters commercially\n2. We outline the application structure and claim strategy\n3. We draft, review with you, and tighten technical accuracy and breadth\n4. We finalize for filing with a clean record and clear support for claims"
       }
     ]
   },
   {
-    name: "Strategy & Commercialization",
-    description: "Operational guidelines, patent landscaping, and transaction support to treat intellectual property as a strategic business asset.",
-    services: [
+    "slug": "patent-prosecution",
+    "title": "Patent Prosecution",
+    "category": "Preparation & Filing",
+    "shortDesc": "After a patent application is filed, the process of patent prosecution begins. Patent prosecution involves responding to Office Actions issued by the USPTO.",
+    "image": "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?auto=format&fit=crop&q=80&w=1200",
+    "overview": "After a patent application is filed, the process of patent prosecution begins. Patent prosecution involves responding to Office Actions issued by the United States Patent and Trademark Office to carve out the monopoly rights you deserve. From the start, we apprise the Examiner about your patent application and negotiate amendments to claims with little prosecution history. When we have to, we appeal your matter before the PTAB to defend the scope of the claims in view of the cited art or Examiner's legal position.",
+    "sections": [
       {
-        slug: "business-counseling-services",
-        title: "Business Counseling Services",
-        desc: "Review of operational agreements, cap tables, and IP assignment clauses to ensure startup governance, equity, and ownership are aligned.",
-        image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1000"
+        "heading": "Data-Driven Prosecution",
+        "content": "We don't just rely on legal arguments; we use data. Our approach involves analyzing examiner statistics, art unit trends, and appeal outcomes to tailor our strategy. This 'moneyball' approach to prosecution helps us:\n\n\u2022 Predict Examiner behavior and tailor arguments to what actually works\n\u2022 Identify when to interview vs. appeal based on statistical win rates\n\u2022 Optimize claim amendments to navigate specific art unit tendencies\n\u2022 Reduce unnecessary rounds of prosecution by making evidence-based decisions"
       },
       {
-        slug: "freedom-to-operate",
-        title: "Freedom to Operate",
-        desc: "Analyzing the patent landscape for your planned products or processes to determine, mitigate, and resolve infringement risks early.",
-        image: "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?auto=format&fit=crop&q=80&w=1000"
+        "heading": "What We Focus On",
+        "content": "Prosecution is not just about getting to allowance. It is about building a claim set you can actually use. We focus on:\n\n\u2022 Claim scope that tracks product value, not just what is easiest to allow\n\u2022 A clean prosecution record that supports later enforcement and licensing\n\u2022 Examiner engagement through well-prepared interviews and clear amendments\n\u2022 Strategic use of continuations when they support a long-term portfolio plan"
       },
       {
-        slug: "ip-rights-government-contracts",
-        title: "IP Rights in Government Contracts",
-        desc: "Navigating Bayh-Dole requirements, federal funding titles, and Technical Data Rights in government procurement.",
-        image: "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&q=80&w=1000"
+        "heading": "Common Prosecution Steps & Deliverables",
+        "content": "Depending on the case, prosecution includes responding to Office Actions, Examiner interviews, RCE or continuation filings, and PTAB appeals.\n\nDeliverables include summaries of each Office Action with plain-language options, recommended response strategies, and draft responses.\n\n1. Review the Office Action and align on desired claim scope\n2. Propose response strategy and request an interview when useful\n3. Draft response focusing on clarity, support, and record quality\n4. Track next steps including allowance, continuation planning, or appeal"
+      }
+    ]
+  },
+  {
+    "slug": "trademark-services",
+    "title": "Trademark Services",
+    "category": "Preparation & Filing",
+    "shortDesc": "Protecting your trademarks starts with smart clearance. We guide you through searches, risk assessments, and naming strategy so you avoid costly conflicts.",
+    "image": "https://images.unsplash.com/photo-1560179707-f14e90ef3623?auto=format&fit=crop&q=80&w=1200",
+    "overview": "Protecting your trademarks starts with smart clearance. We guide you through searches, risk assessments, and naming strategy so you avoid costly conflicts before filing. When you are ready to file, we prepare and prosecute applications, respond to Office Actions, and coordinate foreign filings through trusted associates. We also help police misuse, handle renewals, and structure coexistence or licensing arrangements to keep your brand strong.",
+    "sections": [
+      {
+        "heading": "Brand Architecture for Tech Companies",
+        "content": "For high-tech clients, trademarks often intersect with product naming conventions, open-source project names, and app store listings. We help you navigate specific challenges like:\n\n\u2022 Descriptive vs. Suggestive: Naming features in software without being merely descriptive (which kills the mark).\n\u2022 International Classes: Properly classifying SaaS, PaaS, and downloadables to ensure broad coverage.\n\u2022 Hardware/Software Overlap: Protecting a brand that spans physical devices and cloud services."
       },
       {
-        slug: "licensing-litigation-support",
-        title: "Licensing & Litigation Support",
-        desc: "Defensive assertions analysis, inbound/outbound licensing campaigns, cross-licensing arrangements, and litigation preparedness.",
-        image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=1000"
+        "heading": "Clearance And Strategy",
+        "content": "The earliest decisions usually have the biggest impact. We help you select marks that are distinctive, usable, and protectable by:\n\n\u2022 Evaluating naming options and risk levels\n\u2022 Coordinating clearance searches and reviewing results\n\u2022 Advising on filing bases, goods and services descriptions, and brand architecture"
+      },
+      {
+        "heading": "Filing, Prosecution & Enforcement",
+        "content": "Once you are ready to file, we handle the mechanics and the strategy behind them: preparing applications, responding to Office Actions, managing foreign filings, and active brand policing through monitoring and renewals.\n\n1. We confirm your mark, usage plan, and timeline\n2. We run clearance and propose a filing and evidence strategy\n3. We file and prosecute through registration\n4. We help maintain and protect the mark over time"
+      }
+    ]
+  },
+  {
+    "slug": "opinions",
+    "title": "Opinions",
+    "category": "Post-Grant & Proceedings",
+    "shortDesc": "The law on the effects of formal legal opinion as a factor in determining willful infringement of a patent is still not settled.",
+    "image": "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&q=80&w=1200",
+    "overview": "The law on the effects of formal legal opinion as a factor in determining willful infringement of a patent is still not settled. When uncertain whether you are possibly infringing a patent, our attorneys can analyze the problem patent and provide a legal written opinion about invalidity, non-infringement, and patentability that can guide you about the risks in continuing with the current course of action.",
+    "sections": [
+      {
+        "heading": "Technical Depth in Legal Opinions",
+        "content": "A legal opinion is only as good as the technical understanding behind it. Our attorneys are engineers first, with backgrounds in electrical, computer, and mechanical engineering. When we provide an opinion on invalidity or non-infringement, we dig into the schematic-level details. We don't just compare words; we compare architectures. This technical rigor provides a stronger foundation for our legal conclusions, whether you are defending against an assertion or evaluating a competitor's patent."
+      },
+      {
+        "heading": "Why Obtain an Opinion?",
+        "content": "While the legal standard for 'willfulness' evolves, obtaining a competent opinion of counsel remains a best practice for risk management. It demonstrates:\n\n\u2022 Good Faith: That you took reasonable steps to respect third-party IP rights.\n\u2022 Due Care: That your business decisions were informed by legal analysis.\n\u2022 Strategic Direction: It gives your engineering team clear guidance on 'safe harbors' and design-around options."
+      },
+      {
+        "heading": "Types of Opinions & Process",
+        "content": "We provide Non-Infringement Opinions, Invalidity Opinions, Freedom to Operate (FTO) Opinions, and Patentability Opinions.\n\n1. Scope Definition: Define exact products and patents in scope\n2. Technical Deep Dive: Review technical documentation and file history\n3. Claim Construction: Analyze legal meaning of patent claims\n4. Analysis & Conclusion: Apply claims to technology and deliver actionable opinion"
+      }
+    ]
+  },
+  {
+    "slug": "portfolio-analysis",
+    "title": "Portfolio Analysis",
+    "category": "Post-Grant & Proceedings",
+    "shortDesc": "Portfolio analysis involves understanding the strengths and weaknesses of your patents in different technology areas, and identifying ways to improve.",
+    "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200",
+    "overview": "Portfolio analysis involves understanding the strengths and weaknesses of your patents in different technology areas, and identifying ways to improve your portfolio to make it more marketable or stronger in view of your products or processes. We have the engineering experience and knowledge to understand your technology, and legal expertise to understand the strength of your patent claims. Our experience can help you harvest new ideas and set the roadmap for future patents.",
+    "sections": [
+      {
+        "heading": "Strategic Asset Management",
+        "content": "We view IP through the lens of asset management, not just legal compliance. Drawing on experience with IP audits, due diligence, and licensing for both startups and large enterprises, we evaluate portfolios for:\n\n\u2022 Market Dominance: Using IP to block competitors and secure market share.\n\u2022 Revenue Generation: Identifying assets with licensing or sale potential.\n\u2022 Defensive Strength: Building a moat that deters litigation."
+      },
+      {
+        "heading": "What Portfolio Analysis Answers",
+        "content": "A good portfolio review ties patents to business outcomes. We help answer:\n\n\u2022 Are key products and features actually covered by issued claims?\n\u2022 Where are the gaps that competitors can exploit?\n\u2022 Which patents are strategic, and which are low-value maintenance costs?\n\u2022 How well does the portfolio support licensing, partnerships, or fundraising?"
+      },
+      {
+        "heading": "Typical Work Product & Process",
+        "content": "Deliverables include claim mapping, strength assessments, competitor & whitespace reviews, and filing roadmaps.\n\n1. Define review purpose and target products\n2. Inventory assets and group by technology & business value\n3. Evaluate coverage and identify improvement opportunities\n4. Propose actionable roadmap for filings and pruning"
+      }
+    ]
+  },
+  {
+    "slug": "pto-proceedings-aia",
+    "title": "PTO Proceedings under the AIA",
+    "category": "Post-Grant & Proceedings",
+    "shortDesc": "Under the America Invents Act (AIA), six new proceedings were introduced by the USPTO including IPR, PGR, and Derivation Proceedings.",
+    "image": "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1200",
+    "overview": "Under the America Invents Act (AIA), six new proceedings were introduced by the USPTO including: Third Party pre-issuance submissions, Post Grant Review (an opposition proceeding), Inter partes review (IPR), Ex parte Re-Exam, Supplemental Examination, and Derivation Proceedings. We can help you navigate through a complex maze of rules and standards associated with these proceedings.",
+    "sections": [
+      {
+        "heading": "Winning with Technical Depth",
+        "content": "PTAB trials like IPRs are ostensibly about prior art, but they often turn on the technical interpretation of a single claim term. Our team's deep engineering background allows us to:\n\n\u2022 Deconstruct Expert Declarations: Spot technical flaws in opposing expert testimony.\n\u2022 Draft Technical Arguments: Explain complex art to the Board with engineering precision.\n\u2022 Identify 'Hidden' Prior Art: Locate critical non-patent literature and specifications."
+      },
+      {
+        "heading": "Inter Partes Review (IPR) & Post Grant Review (PGR)",
+        "content": "Inter partes review is a trial proceeding at the Board to review patentability on \u00a7\u00a7 102/103 prior art grounds. Post grant review allows challenging patentability on any \u00a7 282 ground within 9 months of patent issuance."
+      },
+      {
+        "heading": "Derivation Proceedings & Defense",
+        "content": "A derivation proceeding determines whether an inventor in an earlier application derived the claimed invention without authorization. We provide end-to-end trial advocacy before the Patent Trial and Appeal Board."
+      }
+    ]
+  },
+  {
+    "slug": "reexamination-reissue",
+    "title": "Reexamination & Reissue",
+    "category": "Post-Grant & Proceedings",
+    "shortDesc": "As patents become the means for taking patent licenses, it is helpful to deflect such patents cited against your products by initiating Reexamination.",
+    "image": "https://images.unsplash.com/photo-1447069387593-a5de0862481e?auto=format&fit=crop&q=80&w=1200",
+    "overview": "As patents become the means for taking patent licenses, it is helpful to deflect such patents cited against your products or processes by initiating a Reexamination proceeding against the cited patent. We can guide you through this process to seek invalidity of the cited patent. Sometimes Reexamination of a patent is initiated to strengthen the patent before embarking on a future lawsuit against a third party. Our experienced attorneys can help search relevant prior art, if it exists, for considering reexamination of your own patent. We can also correct deficiencies of your existing patents by initiating a Reissue process for your issued patent.",
+    "sections": [
+      {
+        "heading": "Strategic Portfolio Correction",
+        "content": "Reissue and reexamination aren't just for fixing mistakes; they are strategic tools for asset management. Drawing on our experience in IP audits and licensing, we use these proceedings to:\n\n\u2022 Strengthen Claims Before Litigation: Preemptively cite prior art to the USPTO to 'immunize' the patent in court.\n\u2022 Broader Claiming: Within two years of issuance, broadening reissue can capture competitor products.\n\u2022 Clean Up the Record: Correct errors in priority claims or inventorship."
+      },
+      {
+        "heading": "When To Consider Reexamination Or Reissue",
+        "content": "These post-grant tools can be useful when a patent is being asserted against you, when you want to strengthen an asset before licensing or enforcement, or when you discover an issue in an issued patent that should be corrected. We help you evaluate timing, objectives, and practical tradeoffs before moving forward."
+      }
+    ]
+  },
+  {
+    "slug": "business-counseling-services",
+    "title": "Business Counseling Services",
+    "category": "Strategy & Commercialization",
+    "shortDesc": "Business counseling covers operational agreement review, cap table review, and IP clauses to keep governance, equity, and ownership aligned.",
+    "image": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=1200",
+    "overview": "Business counseling covers operational agreement review, cap table review, and IP clauses to keep governance, equity, and ownership aligned. We focus on practical, founder-friendly advice that reduces risk before fundraising, hiring, or partnering. The goal is to spot issues early and keep decisions clear, defensible, and investor-ready.",
+    "sections": [
+      {
+        "heading": "What We Review",
+        "content": "\u2022 Operational agreement review: Decision rights, governance structure, transfer restrictions, and member obligations.\n\u2022 Cap table review: Equity ownership, vesting schedules, option pools, and dilution scenarios.\n\u2022 IP clauses: Assignment, confidentiality, and invention ownership terms in founder, employee, contractor, and partner agreements."
+      },
+      {
+        "heading": "Growth And Risk Planning",
+        "content": "We help you prepare for common inflection points with targeted guidance on:\n\n\u2022 Pre-seed and seed fundraising diligence readiness\n\u2022 Clean chain-of-title documentation for IP ownership\n\u2022 Founder departures, equity repurchases, and vesting triggers\n\u2022 Strategic partnerships and commercial agreements"
+      },
+      {
+        "heading": "Deliverables & Process",
+        "content": "You receive a concise memo prioritizing fixes, plus redlines and sample clauses.\n\n1. Review current governance and equity documents\n2. Flag priority issues and recommend revisions\n3. Align IP clauses across core agreements\n4. Deliver clean, investor-ready documentation package"
+      }
+    ]
+  },
+  {
+    "slug": "freedom-to-operate",
+    "title": "Freedom to Operate",
+    "category": "Strategy & Commercialization",
+    "shortDesc": "Freedom to Operate (FTO) are used to determine the patent landscape of the technology area you plan to adapt for your product or process.",
+    "image": "https://images.unsplash.com/photo-1507537297725-24a1c029d3ca?auto=format&fit=crop&q=80&w=1200",
+    "overview": "Freedom to Operate (FTO) are used to determine the patent landscape of the technology area you plan to adapt for your product or process. The idea is that you want to know if your product or process is possibly infringing an issued patent. We take time to understand your product or process roadmap, and identify patents that your products or process may infringe. FTO opinions can help with mitigating patent litigation risk. An FTO analysis based on the search of patent literature is just the first step. If the patent search reveals that one or more patents do limit a company's freedom to operate, the company must decide how to proceed. Assuming that the blocking patent is valid, options include: purchasing the patent or licensing it, cross-licensing, inventing around, and patent pools.",
+    "sections": [
+      {
+        "heading": "Strategic Due Diligence",
+        "content": "FTO is often a critical component of investment rounds, acquisitions, or product launches:\n\n\u2022 For Investors: We assess the 'cleanliness' of a target's IP landscape to avoid buying into a lawsuit.\n\u2022 For Product Teams: We provide 'clearance' for specific features or architectures early in design cycle when changes are cheap.\n\u2022 For Exits: We help prepare your portfolio for scrutiny by potential acquirers, preemptively addressing known risks."
+      },
+      {
+        "heading": "What An FTO Covers & Deliverables",
+        "content": "Typical coverage includes claim-focused reviews of relevant patents, risk triage, design-around opportunities, and decision support.\n\nDeliverables include a prioritized patent list, claim charts, and practical engineering recommendations."
+      },
+      {
+        "heading": "How The Process Works & Limitations",
+        "content": "1. Define scope, jurisdictions, and timing around roadmap\n2. Review search results and identify asserted patents\n3. Analyze claims against planned implementation\n4. Recommend paths forward (design-around, licensing, strategy changes)\n\nAn FTO is a risk-management tool, not a guarantee. We provide ongoing monitoring as your product and competitors evolve."
+      }
+    ]
+  },
+  {
+    "slug": "ip-rights-government-contracts",
+    "title": "IP Rights in Government Contracts",
+    "category": "Strategy & Commercialization",
+    "shortDesc": "Working with the U.S. Government can be a formidable challenge. IP rights in government procurement are subject to different frameworks.",
+    "image": "https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&q=80&w=1200",
+    "overview": "Working with the U.S. Government can be a formidable challenge. Intellectual property rights in government procurement and sponsored research and development contracts are subject to different frameworks than those prevalent in the private sector. Navigating such frameworks requires IP counsel with knowledge of both IP protection regimes, as well as the ways government contracting and private sector IP protection strategies affect each other.",
+    "sections": [
+      {
+        "heading": "Defense Industry Experience",
+        "content": "We don't just know the regulations; we've lived them. Our team includes former senior engineers from major defense contractors like Lockheed Martin and L3 Communications, where they managed projects involving encrypted data links and government deliverables. We understand:\n\n\u2022 The Engineer's Perspective: How to document 'subject inventions' without disrupting development.\n\u2022 The Program Manager's Perspective: Balancing deliverable requirements with long-term IP retention.\n\u2022 The Reality of 'Mixed Funding': Navigating gray areas where private IR&D dollars mix with government funds."
+      },
+      {
+        "heading": "Key Considerations & Bayh-Dole Compliance",
+        "content": "\u2022 Data Rights: Managing technical data or software rights (SBIR/STTR special data protections).\n\u2022 Patent Rights: Protecting contractor ownership while satisfying usage restrictions.\n\u2022 Government Use Rights: Mitigating risk of federal 'march-in' rights.\n\u2022 The Bayh-Dole Act: Retaining invention ownership under federal funding while granting standard governmental licenses."
+      }
+    ]
+  },
+  {
+    "slug": "licensing-litigation-support",
+    "title": "Licensing & Litigation Support",
+    "category": "Strategy & Commercialization",
+    "shortDesc": "As you become successful, licensing opportunities knock on your door. We help with defensive analysis and offensive monetization.",
+    "image": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&q=80&w=1200",
+    "overview": "As you become successful, licensing opportunities knock on your door. We help with defensive analysis to identify defensive risk of the asserted patents to your current and future products. We prepare validity analysis of the patents and identify possible defenses to gauge the defensive risk. We also assist with purchasing opportunities of patents to protect your current and future products, and for possible offensive use of the patents.",
+    "sections": [
+      {
+        "heading": "Asset Monetization and Strategy",
+        "content": "Licensing is not just about defense; it's about unlocking value. Drawing on experience with intellectual capital management, we help companies treat their IP as a business asset:\n\n\u2022 Outbound Licensing Campaigns: Identifying potential licensees and preparing 'evidence of use' charts.\n\u2022 Cross-Licensing: Leveraging your portfolio to gain access to competitor technology or settle disputes.\n\u2022 IP Valuation Support: Understanding the worth of your assets in the context of a sale or spin-out."
+      },
+      {
+        "heading": "Litigation And Pre-Litigation Analysis",
+        "content": "When a dispute is brewing, time and clarity matter. We support teams with non-infringement and validity analysis, prior art search coordination, early conversation strategies, and expert witness support."
+      },
+      {
+        "heading": "Deliverables & Process",
+        "content": "Deliverables include prioritized risk summaries, claim charts, and actionable plans.\n\n1. Align on goals, timeline, and required decisions\n2. Collect product details and review patent file histories\n3. Produce clear options and refine based on your direction"
       }
     ]
   }
 ];
+
+const categories = [
+  "Preparation & Filing",
+  "Post-Grant & Proceedings",
+  "Strategy & Commercialization"
+];
 ---
 
-<Layout title="Our Services | MGF Law">
-  <div class="min-h-screen bg-[#0A0F1D] text-white selection:bg-[#c5a880] selection:text-[#0A0F1D] pb-16">
-    <!-- Header Hero -->
-    <section class="border-b border-[#c5a880]/10 bg-[#070b16] py-20 text-center space-y-4">
-      <div class="container mx-auto px-4 max-w-4xl">
-        <span class="text-xs font-bold uppercase tracking-widest text-[#c5a880]">Our Capabilities</span>
+<Layout title="Services | MGF Law">
+  <div class="min-h-screen bg-[#0A0F1D] text-white selection:bg-[#c5a880] selection:text-[#0A0F1D] pb-16 font-sans">
+    
+    <!-- Hero Section with Stats -->
+    <section class="border-b border-[#c5a880]/10 bg-[#070b16] py-20 text-center space-y-6">
+      <div class="container mx-auto px-4 max-w-4xl space-y-4">
+        <span class="text-xs font-bold uppercase tracking-widest text-[#c5a880]">Our Services</span>
         <h1 class="text-4xl sm:text-5xl md:text-6xl font-serif text-white leading-tight font-light">
-          Intellectual Property <span class="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#c5a880] to-[#e4d4b1]">Services</span>
+          Technology Expertise Across <span class="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#c5a880] to-[#e4d4b1]">Cutting-Edge Sectors</span>
         </h1>
-        <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed font-sans">
-          MGF PC offers highly sophisticated, engineering-backed technical counsel and legal strategy across the entire lifecycle of intellectual property.
+        <p class="text-slate-300 text-sm sm:text-base max-w-3xl mx-auto leading-relaxed">
+          MGF advises and acts for inventors and companies across the gamut of technologies within the intellectual property landscape, empowering them to successfully navigate an often complex legal landscape while minimising risk.
         </p>
+
+        <!-- Stats Grid -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 pt-6 max-w-2xl mx-auto">
+          <div class="bg-[#12192c] border border-[#c5a880]/15 p-6 rounded-2xl space-y-1 shadow">
+            <span class="text-3xl sm:text-4xl font-extrabold text-[#c5a880] font-mono">203+</span>
+            <p class="text-[11px] text-slate-300 font-bold uppercase tracking-wider">Years Combined Experience</p>
+          </div>
+          <div class="bg-[#12192c] border border-[#c5a880]/15 p-6 rounded-2xl space-y-1 shadow">
+            <span class="text-3xl sm:text-4xl font-extrabold text-[#c5a880] font-mono">92.0%</span>
+            <p class="text-[11px] text-slate-300 font-bold uppercase tracking-wider">Patent Success Rate</p>
+          </div>
+          <div class="col-span-2 sm:col-span-1 bg-[#12192c] border border-[#c5a880]/15 p-6 rounded-2xl space-y-1 shadow">
+            <span class="text-3xl sm:text-4xl font-extrabold text-[#c5a880] font-mono">15+</span>
+            <p class="text-[11px] text-slate-300 font-bold uppercase tracking-wider">IP Professionals</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Services Categories & Cards -->
-    <section class="container mx-auto px-4 py-16 max-w-5xl space-y-24 font-sans">
-      {serviceCategories.map((category) => (
-        <div class="space-y-8">
-          <!-- Category Header -->
-          <div class="border-b border-[#c5a880]/15 pb-4 space-y-2">
-            <h2 class="text-2xl sm:text-3xl font-serif text-[#c5a880] font-semibold tracking-wide">
-              {category.name}
-            </h2>
-            <p class="text-xs sm:text-sm text-slate-400 max-w-3xl leading-relaxed">
-              {category.description}
-            </p>
-          </div>
+    <!-- Services Grouped by Category -->
+    <section class="container mx-auto px-4 py-16 max-w-5xl space-y-20">
+      {categories.map((category) => {
+        const categoryServices = services.filter((s) => s.category === category);
+        return (
+          <div class="space-y-8">
+            <div class="border-b border-[#c5a880]/15 pb-4">
+              <h2 class="text-2xl sm:text-3xl font-serif text-[#c5a880] font-bold tracking-wide">
+                {category}
+              </h2>
+            </div>
 
-          <!-- Services Grid -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {category.services.map((service) => (
-              <a href={`/services/${service.slug}`} class="group bg-[#12192c] border border-[#c5a880]/10 rounded-2xl overflow-hidden shadow transition-all duration-300 hover:border-[#c5a880]/35 hover:-translate-y-1 flex flex-col justify-between">
-                <div>
-                  <div class="h-48 overflow-hidden relative">
-                    <img src={service.image} alt={service.title} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#12192c] via-transparent to-transparent opacity-60"></div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {categoryServices.map((service) => (
+                <a href={`/services/${service.slug}`} class="group bg-[#12192c] border border-[#c5a880]/15 rounded-2xl overflow-hidden shadow hover:border-[#c5a880]/40 transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
+                  <div>
+                    <div class="h-48 overflow-hidden relative">
+                      <img src={service.image} alt={service.title} class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                      <div class="absolute inset-0 bg-gradient-to-t from-[#12192c] via-transparent to-transparent opacity-70"></div>
+                      <span class="absolute top-4 left-4 px-3 py-1 text-[10px] font-bold rounded-full bg-[#0A0F1D]/80 border border-[#c5a880]/30 text-[#c5a880] uppercase tracking-wider backdrop-blur-sm">
+                        {service.category}
+                      </span>
+                    </div>
+                    <div class="p-6 space-y-3">
+                      <h3 class="text-xl sm:text-2xl font-serif font-bold text-white group-hover:text-[#c5a880] transition-colors">
+                        {service.title}
+                      </h3>
+                      <p class="text-xs sm:text-sm text-slate-300 leading-relaxed line-clamp-3">
+                        {service.shortDesc}
+                      </p>
+                    </div>
                   </div>
-                  <div class="p-6 space-y-3">
-                    <h3 class="text-xl font-bold text-white font-serif group-hover:text-[#c5a880] transition-colors">
-                      {service.title}
-                    </h3>
-                    <p class="text-xs sm:text-sm text-slate-300 leading-relaxed line-clamp-3">
-                      {service.desc}
-                    </p>
+                  <div class="px-6 pb-6 pt-2">
+                    <span class="inline-flex items-center gap-1.5 text-xs font-bold text-[#c5a880] group-hover:underline">
+                      Learn More <span>→</span>
+                    </span>
                   </div>
-                </div>
-                <div class="px-6 pb-6 pt-2">
-                  <span class="inline-flex items-center gap-1.5 text-xs font-bold text-[#c5a880] group-hover:underline">
-                    Explore Capability <span>→</span>
-                  </span>
-                </div>
-              </a>
-            ))}
+                </a>
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
+        );
+      })}
     </section>
+
+    <!-- Call to Action Section -->
+    <section class="container mx-auto px-4 py-12 max-w-4xl text-center space-y-6">
+      <div class="bg-[#12192c] border border-[#c5a880]/20 p-8 sm:p-12 rounded-2xl space-y-4">
+        <h2 class="text-2xl sm:text-3xl font-serif font-bold text-white">Protect Your Innovations</h2>
+        <p class="text-xs sm:text-sm text-slate-300 max-w-xl mx-auto leading-relaxed">
+          Comprehensive intellectual property services from inception to enforcement, tailored to protect your innovations and maximize their value.
+        </p>
+        <div class="pt-2">
+          <a href="/contact" class="inline-block px-8 py-3.5 rounded-lg bg-[#c5a880] text-[#0A0F1D] hover:bg-[#b0936b] transition-all font-extrabold text-xs tracking-wider uppercase shadow shadow-[#c5a880]/10">
+            TALK TO US
+          </a>
+        </div>
+      </div>
+    </section>
+
   </div>
 </Layout>
