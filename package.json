@@ -1,7 +1,7 @@
 {
-  "name": "mgf-website",
+  "name": "asf-website",
   "version": "1.0.0",
-  "description": "Mughal Gaudry & Franklin PC - Intellectual Property Law Firm | MGF Law",
+  "description": "Ahsan Shahzad Firm PC - Intellectual Property Law Firm | ASF Law",
   "type": "module",
   "scripts": {
     "dev": "NODE_ENV=development ASTRO_TELEMETRY_DISABLED=1 astro dev --port 4323",

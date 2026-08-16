@@ -2,8 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Contact Us | MGF Law">
-  <div class="min-h-screen bg-[#0A0F1D] text-white selection:bg-[#c5a880] selection:text-[#0A0F1D] pb-16">
+<Layout title="Contact Us | ASF Law">
+  <div class="min-h-screen bg-[#0A0F1D] text-white selection:bg-[#c5a880] selection:text-[#0A0F1D] pb-16 font-sans">
     <main class="container mx-auto px-4 py-12 max-w-5xl flex-grow w-full">
       <div class="mb-8 flex items-center justify-between border-b border-[#c5a880]/10 pb-6">
         <h1 class="text-4xl font-extrabold text-white font-serif">Contact Us</h1>
@@ -12,62 +12,70 @@ import Layout from '../layouts/Layout.astro';
 
       <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start">
         <!-- Left column: Contact Form -->
-        <div class="lg:col-span-3 bg-[#12192c] border border-[#c5a880]/10 p-6 sm:p-8 rounded-xl shadow">
-          <h2 class="text-xl font-bold mb-6 text-white font-serif">Book a Consultation</h2>
-          <form class="space-y-6">
+        <div class="lg:col-span-3 bg-[#12192c] border border-[#c5a880]/15 p-6 sm:p-8 rounded-2xl shadow-xl space-y-6">
+          <h2 class="text-2xl font-bold text-white font-serif">Book a Consultation</h2>
+          <form onsubmit="event.preventDefault(); alert('Thank you for contacting Ahsan Shahzad Firm PC (ASF Law)! We will respond shortly.');" class="space-y-5">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label for="name" class="block text-xs font-bold uppercase tracking-wider text-[#c5a880] mb-1">Your Name</label>
-                <input type="text" id="name" required class="w-full p-3 rounded-lg border border-[#c5a880]/10 bg-[#0A0F1D] text-white focus:outline-none focus:border-[#c5a880] focus:ring-1 focus:ring-[#c5a880]/30 transition-colors">
+                <input type="text" id="name" required class="w-full p-3 rounded-xl border border-[#c5a880]/20 bg-[#0A0F1D] text-white focus:outline-none focus:border-[#c5a880] transition-colors text-xs sm:text-sm">
               </div>
               <div>
                 <label for="email" class="block text-xs font-bold uppercase tracking-wider text-[#c5a880] mb-1">Email Address</label>
-                <input type="email" id="email" required class="w-full p-3 rounded-lg border border-[#c5a880]/10 bg-[#0A0F1D] text-white focus:outline-none focus:border-[#c5a880] focus:ring-1 focus:ring-[#c5a880]/30 transition-colors">
+                <input type="email" id="email" required class="w-full p-3 rounded-xl border border-[#c5a880]/20 bg-[#0A0F1D] text-white focus:outline-none focus:border-[#c5a880] transition-colors text-xs sm:text-sm">
               </div>
             </div>
 
             <div>
-              <label for="firm" class="block text-xs font-bold uppercase tracking-wider text-[#c5a880] mb-1">Company / Organization</label>
-              <input type="text" id="firm" required class="w-full p-3 rounded-lg border border-[#c5a880]/10 bg-[#0A0F1D] text-white focus:outline-none focus:border-[#c5a880] focus:ring-1 focus:ring-[#c5a880]/30 transition-colors" placeholder="e.g. Innovate Tech Inc.">
+              <label for="phone" class="block text-xs font-bold uppercase tracking-wider text-[#c5a880] mb-1">Phone Number</label>
+              <input type="tel" id="phone" class="w-full p-3 rounded-xl border border-[#c5a880]/20 bg-[#0A0F1D] text-white focus:outline-none focus:border-[#c5a880] transition-colors text-xs sm:text-sm">
             </div>
 
             <div>
-              <label for="message" class="block text-xs font-bold uppercase tracking-wider text-[#c5a880] mb-1">Inquiry / Message</label>
-              <textarea id="message" required class="w-full p-3 rounded-lg border border-[#c5a880]/10 bg-[#0A0F1D] text-white h-32 focus:outline-none focus:border-[#c5a880] focus:ring-1 focus:ring-[#c5a880]/30 transition-colors" placeholder="Briefly describe your invention, technology sector, or IP portfolio questions..."></textarea>
+              <label for="subject" class="block text-xs font-bold uppercase tracking-wider text-[#c5a880] mb-1">Practice Area / Topic</label>
+              <input type="text" id="subject" placeholder="e.g., Patent Prosecution, FTO, Trademark Clearance" class="w-full p-3 rounded-xl border border-[#c5a880]/20 bg-[#0A0F1D] text-white focus:outline-none focus:border-[#c5a880] transition-colors text-xs sm:text-sm">
             </div>
 
             <div>
-              <button type="submit" class="bg-[#c5a880] text-[#0A0F1D] font-extrabold py-3.5 px-6 rounded-lg hover:bg-[#b0936b] transition-all flex items-center justify-center gap-2 w-full sm:w-auto shadow-md shadow-[#c5a880]/10">
-                Send Message
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
-                </svg>
-              </button>
+              <label for="message" class="block text-xs font-bold uppercase tracking-wider text-[#c5a880] mb-1">Invention / Brief Overview</label>
+              <textarea id="message" rows="4" required placeholder="Please provide non-confidential details regarding your inquiry..." class="w-full p-3 rounded-xl border border-[#c5a880]/20 bg-[#0A0F1D] text-white focus:outline-none focus:border-[#c5a880] transition-colors text-xs sm:text-sm"></textarea>
             </div>
+
+            <button type="submit" class="w-full py-3.5 rounded-xl bg-[#c5a880] text-[#0A0F1D] hover:bg-[#b0936b] transition-all font-bold text-xs uppercase tracking-wider shadow shadow-[#c5a880]/10">
+              Submit Inquiry
+            </button>
           </form>
         </div>
 
-        <!-- Right column: Corporate Details -->
+        <!-- Right column: Direct Office Info -->
         <div class="lg:col-span-2 space-y-6">
-          <div>
-            <h2 class="text-xl font-bold text-white font-serif mb-1">MGF Offices</h2>
-            <p class="text-sm text-slate-300 mb-4">Serving clients across the U.S. and globally.</p>
+          <div class="bg-[#12192c] border border-[#c5a880]/15 p-6 sm:p-8 rounded-2xl shadow-xl space-y-4">
+            <h2 class="text-xl font-bold text-white font-serif">ASF Law Offices</h2>
+            <div class="space-y-3 text-xs sm:text-sm text-slate-300">
+              <p class="flex items-start gap-2">
+                <span class="text-[#c5a880]">📍</span>
+                <span>1500 NW Bethany Blvd., Suite 200 Beaverton, OR 97006</span>
+              </p>
+              <p class="flex items-center gap-2">
+                <span class="text-[#c5a880]">📞</span>
+                <a href="tel:9716340286" class="hover:text-[#c5a880] font-semibold text-white">(971) 634-0286</a>
+              </p>
+              <p class="flex items-center gap-2">
+                <span class="text-[#c5a880]">✉️</span>
+                <a href="mailto:contact@asf.law" class="hover:text-[#c5a880] text-[#c5a880] font-semibold">contact@asf.law</a>
+              </p>
+              <p class="flex items-center gap-2 text-slate-400 text-xs">
+                <span class="text-[#c5a880]">🕒</span>
+                <span>Mon - Fri: 9:00 AM – 5:00 PM PST</span>
+              </p>
+            </div>
           </div>
 
-          <div class="space-y-4">
-            <!-- Main Phone & Email -->
-            <div class="bg-[#12192c] border border-[#c5a880]/10 p-5 rounded-xl shadow">
-              <span class="block text-[10px] text-[#c5a880] font-bold uppercase tracking-wider mb-2">Direct Channels</span>
-              <p class="text-sm font-semibold text-white block">📞 (971) 634-0286</p>
-              <p class="text-sm font-semibold text-[#c5a880] block mt-1">📧 contact@mgf.law</p>
-            </div>
-
-            <!-- Locations -->
-            <div class="bg-[#12192c]/50 border border-[#c5a880]/5 p-5 rounded-xl">
-              <span class="block text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-2">Primary Mailing Address</span>
-              <p class="text-sm font-bold text-white">Mughal Gaudry & Franklin PC</p>
-              <p class="text-xs text-slate-300 mt-2">📍 3532 N. Franklin St, Suite A, Denver, CO 80205</p>
-            </div>
+          <div class="bg-[#12192c]/50 border border-[#c5a880]/10 p-6 rounded-2xl space-y-2">
+            <h3 class="text-sm font-serif font-bold text-white">Confidentiality Note</h3>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              Please avoid transmitting sensitive invention specifics prior to formal conflict clearance and engagement letter execution.
+            </p>
           </div>
         </div>
       </div>
