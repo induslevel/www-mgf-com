@@ -1,0 +1,72 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+import '../styles/global.css';
+import SEO from '../components/seo/SEO.astro';
+import Analytics from '../components/seo/Analytics.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import CookieBanner from '../components/CookieBanner.astro';
+---
+
+<!doctype html>
+<html lang="en" data-theme="blue">
+  <head>
+    <Analytics />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/png" href="/favicon.png" id="dynamic-favicon" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <SEO title={title} />
+    <script is:inline>
+      const theme = localStorage.getItem('theme') || 'light';
+      if (theme === 'dark') document.documentElement.classList.add('dark');
+      else document.documentElement.classList.remove('dark');
+      
+      const colorTheme = localStorage.getItem('color-theme') || 'blue';
+      document.documentElement.setAttribute('data-theme', colorTheme);
+    </script>
+    <script is:inline>
+      function updateFavicon() {
+        const favicon = document.getElementById('dynamic-favicon');
+        if (!favicon) return;
+        requestAnimationFrame(() => {
+          const accentColor = getComputedStyle(document.documentElement).getPropertyValue('--color-accent').trim() || '#3b82f6';
+          const img = new Image();
+          img.src = '/favicon.png';
+          img.onload = () => {
+            const canvas = document.createElement('canvas');
+            canvas.width = img.width;
+            canvas.height = img.height;
+            const ctx = canvas.getContext('2d');
+            if (!ctx) return;
+            ctx.drawImage(img, 0, 0);
+            ctx.globalCompositeOperation = 'source-in';
+            ctx.fillStyle = accentColor;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            favicon.href = canvas.toDataURL('image/png');
+          };
+        });
+      }
+      document.addEventListener('DOMContentLoaded', updateFavicon);
+      new MutationObserver((mutations) => {
+        for (const m of mutations) {
+          if (m.type === 'attributes' && (m.attributeName === 'data-theme' || m.attributeName === 'class')) {
+            updateFavicon();
+          }
+        }
+      }).observe(document.documentElement, { attributes: true });
+    </script>
+  </head>
+  <body class="min-h-screen bg-background text-foreground antialiased flex flex-col">
+    <Header />
+    <slot />
+    <Footer />
+    <CookieBanner />
+  </body>
+</html>

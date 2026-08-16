@@ -1,0 +1,26 @@
+---
+/**
+ * PortfolioSvg
+ * Renders a highly detailed, professional, and theme-cohesive technical diagram
+ * localized directly on the server to completely eliminate third-party requests.
+ */
+interface Props {
+  slug: string;
+  category: string;
+  title: string;
+  image: string;
+}
+
+const { title, image } = Astro.props;
+---
+
+<div class="w-full h-full flex items-center justify-center bg-gradient-subtle p-2 rounded-2xl relative overflow-hidden group/svg">
+  <!-- Glowing subtle backdrops linked to active brand color -->
+  <div class="absolute inset-0 bg-accent/5 dark:bg-accent/5 opacity-40 rounded-2xl transition-all group-hover/svg:opacity-60 duration-300"></div>
+  
+  <img 
+    src={image} 
+    alt={title} 
+    class="relative w-full h-full max-h-[220px] object-cover rounded-xl shadow-md transition-all group-hover/svg:scale-[1.02] duration-300"
+  />
+</div>

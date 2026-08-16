@@ -1,0 +1,76 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contact Us | MGF Law">
+  <div class="min-h-screen bg-[#0A0F1D] text-white selection:bg-[#c5a880] selection:text-[#0A0F1D] pb-16">
+    <main class="container mx-auto px-4 py-12 max-w-5xl flex-grow w-full">
+      <div class="mb-8 flex items-center justify-between border-b border-[#c5a880]/10 pb-6">
+        <h1 class="text-4xl font-extrabold text-white font-serif">Contact Us</h1>
+        <a href="/" class="text-[#c5a880] hover:underline font-medium text-sm">← Back to Home</a>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start">
+        <!-- Left column: Contact Form -->
+        <div class="lg:col-span-3 bg-[#12192c] border border-[#c5a880]/10 p-6 sm:p-8 rounded-xl shadow">
+          <h2 class="text-xl font-bold mb-6 text-white font-serif">Book a Consultation</h2>
+          <form class="space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="name" class="block text-xs font-bold uppercase tracking-wider text-[#c5a880] mb-1">Your Name</label>
+                <input type="text" id="name" required class="w-full p-3 rounded-lg border border-[#c5a880]/10 bg-[#0A0F1D] text-white focus:outline-none focus:border-[#c5a880] focus:ring-1 focus:ring-[#c5a880]/30 transition-colors">
+              </div>
+              <div>
+                <label for="email" class="block text-xs font-bold uppercase tracking-wider text-[#c5a880] mb-1">Email Address</label>
+                <input type="email" id="email" required class="w-full p-3 rounded-lg border border-[#c5a880]/10 bg-[#0A0F1D] text-white focus:outline-none focus:border-[#c5a880] focus:ring-1 focus:ring-[#c5a880]/30 transition-colors">
+              </div>
+            </div>
+
+            <div>
+              <label for="firm" class="block text-xs font-bold uppercase tracking-wider text-[#c5a880] mb-1">Company / Organization</label>
+              <input type="text" id="firm" required class="w-full p-3 rounded-lg border border-[#c5a880]/10 bg-[#0A0F1D] text-white focus:outline-none focus:border-[#c5a880] focus:ring-1 focus:ring-[#c5a880]/30 transition-colors" placeholder="e.g. Innovate Tech Inc.">
+            </div>
+
+            <div>
+              <label for="message" class="block text-xs font-bold uppercase tracking-wider text-[#c5a880] mb-1">Inquiry / Message</label>
+              <textarea id="message" required class="w-full p-3 rounded-lg border border-[#c5a880]/10 bg-[#0A0F1D] text-white h-32 focus:outline-none focus:border-[#c5a880] focus:ring-1 focus:ring-[#c5a880]/30 transition-colors" placeholder="Briefly describe your invention, technology sector, or IP portfolio questions..."></textarea>
+            </div>
+
+            <div>
+              <button type="submit" class="bg-[#c5a880] text-[#0A0F1D] font-extrabold py-3.5 px-6 rounded-lg hover:bg-[#b0936b] transition-all flex items-center justify-center gap-2 w-full sm:w-auto shadow-md shadow-[#c5a880]/10">
+                Send Message
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Right column: Corporate Details -->
+        <div class="lg:col-span-2 space-y-6">
+          <div>
+            <h2 class="text-xl font-bold text-white font-serif mb-1">MGF Offices</h2>
+            <p class="text-sm text-slate-300 mb-4">Serving clients across the U.S. and globally.</p>
+          </div>
+
+          <div class="space-y-4">
+            <!-- Main Phone & Email -->
+            <div class="bg-[#12192c] border border-[#c5a880]/10 p-5 rounded-xl shadow">
+              <span class="block text-[10px] text-[#c5a880] font-bold uppercase tracking-wider mb-2">Direct Channels</span>
+              <p class="text-sm font-semibold text-white block">📞 (971) 634-0286</p>
+              <p class="text-sm font-semibold text-[#c5a880] block mt-1">📧 contact@mgf.law</p>
+            </div>
+
+            <!-- Locations -->
+            <div class="bg-[#12192c]/50 border border-[#c5a880]/5 p-5 rounded-xl">
+              <span class="block text-[10px] text-slate-400 font-bold uppercase tracking-wider mb-2">Primary Mailing Address</span>
+              <p class="text-sm font-bold text-white">Mughal Gaudry & Franklin PC</p>
+              <p class="text-xs text-slate-300 mt-2">📍 3532 N. Franklin St, Suite A, Denver, CO 80205</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</Layout>

@@ -1,0 +1,58 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = "Solorithm | Empowering IT Strength & Business Growth",
+  description = "Solorithm offers professional IT consulting and managed services across Network Operations (NetOps), Systems Operations (SysOps), and Security Operations (SecOps). We help scale cloud platforms and secure modern business infrastructures."
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || "https://solorithm.com");
+---
+
+<title>{title}</title>
+<meta name="description" content={description} />
+<meta name="keywords" content="it consulting, netops, sysops, secops, managed noc, firewall management, virtual ciso, cybersecurity risk assessment, cloud platform security, microsoft 365 managed services, remote infrastructure management, solorithm" />
+<link rel="canonical" href={canonicalURL.toString()} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={canonicalURL.toString()} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content="/og-image.png" />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={canonicalURL.toString()} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content="/og-image.png" />
+
+<!-- JSON-LD Structured Data for Search Engine Rich Snippets -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Solorithm",
+    "url": "https://solorithm.com",
+    "description": "Professional IT Consulting & Managed Services in NetOps, SysOps, and SecOps."
+  }
+</script>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Solorithm",
+    "description": "Professional IT Consulting & Managed Services in NetOps, SysOps, and SecOps.",
+    "url": "https://solorithm.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "PK"
+    },
+    "telephone": "+92 334 9887654",
+    "email": "contact@solorithm.com"
+  }
+</script>

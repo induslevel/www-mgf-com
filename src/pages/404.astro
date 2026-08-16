@@ -1,0 +1,80 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Page not found">
+  <section class="relative flex-grow flex items-center justify-center overflow-hidden py-16">
+    <!-- Background Effects -->
+    <div class="absolute inset-0 bg-grid-pattern [mask-image:radial-gradient(ellipse_at_center,white_20%,transparent_70%)] pointer-events-none opacity-40"></div>
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-accent/10 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="relative container px-6">
+      <div class="max-w-2xl mx-auto text-center">
+        <!-- Animated 404 -->
+        <div class="relative mb-8">
+          <div class="error-code font-display text-[8rem] md:text-[12rem] font-bold leading-none tracking-tighter select-none">
+            <span class="inline-block error-digit" style="animation-delay: 0s;">4</span>
+            <span class="inline-block error-digit text-transparent bg-clip-text bg-gradient-to-br from-accent via-accent-hover to-accent" style="animation-delay: 0.1s;">0</span>
+            <span class="inline-block error-digit" style="animation-delay: 0.2s;">4</span>
+          </div>
+          <!-- Glow effect behind the 0 -->
+          <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+            <div class="w-32 h-32 md:w-48 md:h-48 bg-accent/20 rounded-full blur-[60px] animate-pulse"></div>
+          </div>
+        </div>
+
+        <!-- Copy -->
+        <h1 class="text-2xl md:text-3xl font-extrabold text-foreground mb-4">
+          Looks like you've drifted off course
+        </h1>
+
+        <p class="text-lg text-foreground/70 max-w-md mx-auto mb-10">
+          The page you're looking for has either been moved, deleted, or never existed in the first place.
+        </p>
+
+        <!-- CTA -->
+        <div class="flex items-center justify-center mb-12">
+          <a href="/" class="bg-accent hover:bg-accent-hover text-white font-bold py-3.5 px-8 rounded-xl transition-all shadow-lg shadow-accent/30 inline-flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-4 h-4">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+            </svg>
+            Back to Home
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .error-code {
+    color: var(--color-text-base, currentColor);
+    opacity: 0.15;
+  }
+
+  .error-digit {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .error-digit:nth-child(2) {
+    opacity: 1;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  /* Dark mode adjustments */
+  :global(.dark) .error-code {
+    opacity: 0.1;
+  }
+
+  :global(.dark) .error-digit:nth-child(2) {
+    opacity: 1;
+  }
+</style>

@@ -1,0 +1,287 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const sectors = [
+  {
+    title: 'ARTIFICIAL INTELLIGENCE',
+    desc: 'Machine learning, neural networks, fintech, and business methods. We protect innovations in AI algorithms, data processing, and intelligent systems.'
+  },
+  {
+    title: 'BIOLOGICAL ARTS',
+    desc: 'Biotechnology, diagnostics, and biomedical innovations spanning devices, assays, and therapeutics.'
+  },
+  {
+    title: 'CHEMICAL ARTS',
+    desc: 'Chemical compounds, materials science, and pharmaceutical innovations. We protect your chemistry-based inventions.'
+  },
+  {
+    title: 'DATA SECURITY & IDENTITY',
+    desc: 'Zero-trust data protection, device identity, tokenized access, and audit-ready controls for cloud and edge workloads.'
+  },
+  {
+    title: 'ELECTRICAL ARTS & CONSUMER ELECTRONICS',
+    desc: 'Circuits, optics, memories, and batteries. We protect innovations in consumer devices, power systems, and electronic components.'
+  },
+  {
+    title: 'MECHANICAL ARTS',
+    desc: 'Mechanical systems, manufacturing processes, and physical devices. We protect innovations in mechanical engineering.'
+  },
+  {
+    title: 'SEMICONDUCTOR, OPTICAL & MEMS DEVICES',
+    desc: 'Process, packaging, and tools expertise. From chip design to fabrication methods, we cover the full semiconductor stack.'
+  },
+  {
+    title: 'SOFTWARE ARTS',
+    desc: 'Software algorithms, applications, and computing innovations. We navigate the complex landscape of software patents.'
+  }
+];
+
+const team = [
+  {
+    name: 'Usman Mughal',
+    role: 'Co-Founder, Patent Attorney, Shareholder',
+    creds: 'J.D. | M.S. | B.S.',
+    desc: 'Usman has been working in patent preparation and prosecution since 2008. He defended his M.S. thesis from NC State University on active antenna arrays, and spent 9 years as an analog/mixed-signal design engineer at Intel Corp, inventing 11 patents. He co-managed prosecution and budgeting for a major power management portfolio. His practice covers 5G RAN standards, mixed-signal circuits, antennas, volatile/non-volatile memories, semiconductors, AI hardware, and processors. Usman is listed as a "Rising Star" by Oregon Super Lawyers and a "Top Lawyer" by Portland Monthly.'
+  },
+  {
+    name: 'Kate Gaudry',
+    role: 'Co-Founder, Patent Attorney, Shareholder',
+    creds: 'Ph.D. | J.D. | B.S.',
+    desc: 'Kate\'s practice spans physics, neuroscience, artificial intelligence, biology, and software. Her current focus is on AI, bioinformatics, and software, with lab experiences at Harvard, UCSD, Los Alamos National Lab, and M.D. Anderson Cancer Center. She represents clients from startups to Fortune 100 companies and universities. Kate is the Vice-Chair of the AI Task Force of the AIPLA and a dedicated advocate for the physically disabled, promoting virtual-work environments.'
+  },
+  {
+    name: 'Thomas Franklin',
+    role: 'Co-Founder, Patent Attorney, Shareholder',
+    creds: 'J.D. | B.S.',
+    desc: 'Tom has 30 years of experience in patent prosecution, licensing, and intellectual capital management. He is an expert in portfolio management, IP audits, and strategic planning, and developed the client-facing portfolio tool, Triangle IP. He is widely recognized by Chambers USA, The Best Lawyers in America®, Legal 500 US, IAM Patent 1000, and IAM Strategy 300, and has been named a Colorado Super Lawyer and Lawyer of the Year.'
+  }
+];
+---
+
+<Layout title="Mughal Gaudry & Franklin PC | MGF Law">
+  <!-- Force Original Theme (Navy & Gold) -->
+  <div class="min-h-screen bg-[#0A0F1D] text-white selection:bg-[#c5a880] selection:text-[#0A0F1D]">
+    
+    <!-- Hero Block -->
+    <section class="relative min-h-[85vh] flex items-center justify-center overflow-hidden border-b border-[#c5a880]/10 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#131d35] via-[#0A0F1D] to-[#0A0F1D] py-20">
+      <div class="absolute inset-0 opacity-10 bg-[url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&q=80&w=1920')] bg-cover bg-center mix-blend-overlay"></div>
+      
+      <div class="relative z-10 max-w-4xl mx-auto text-center px-4 space-y-8">
+        <!-- Badge -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#c5a880]/20 bg-[#c5a880]/5 text-[#c5a880] text-xs font-bold uppercase tracking-wider">
+          <span>Celebrating 10+ Years of Practice</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-6xl md:text-7xl font-light tracking-tight text-white leading-tight font-serif">
+          PATENT & TRADEMARK <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#c5a880] to-[#e4d4b1] font-semibold">LAWYERS</span>
+        </h1>
+        <p class="text-base sm:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed font-sans">
+          Serving clients across the United States and the world with world-class technical and legal IP expertise.
+        </p>
+        <div class="pt-4">
+          <a href="/contact" class="inline-block px-8 py-4 rounded-lg bg-[#c5a880] text-[#0A0F1D] hover:bg-[#b0936b] transition-all font-extrabold text-sm tracking-wider shadow-lg shadow-[#c5a880]/10 hover:scale-[1.02] active:scale-[0.98]">
+            BOOK A CONSULTATION
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- University & Client Grid -->
+    <section class="border-b border-[#c5a880]/10 bg-[#070b16] py-12">
+      <div class="container mx-auto px-4 max-w-5xl">
+        <p class="text-center text-xs font-bold text-slate-400 uppercase tracking-widest mb-8">Educated and Trusted At</p>
+        <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-6 items-center justify-items-center opacity-70">
+          <span class="text-xs font-bold text-slate-300 font-serif">Lewis & Clark</span>
+          <span class="text-xs font-bold text-slate-300 font-serif">NC State</span>
+          <span class="text-xs font-bold text-slate-300 font-serif">Stanford</span>
+          <span class="text-xs font-bold text-slate-300 font-serif">US Air Force</span>
+          <span class="text-xs font-bold text-slate-300 font-serif">UC San Diego</span>
+          <span class="text-xs font-bold text-slate-300 font-serif">Harvard</span>
+          <span class="text-xs font-bold text-slate-300 font-serif">San Diego</span>
+          <span class="text-xs font-bold text-slate-300 font-serif">USC</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container mx-auto px-4 py-24 max-w-5xl space-y-12">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#c5a880]">The Firm</span>
+          <h2 class="text-3xl sm:text-5xl font-light text-white font-serif leading-tight">From Patent to Protection</h2>
+          <p class="text-[#94A3B8] text-base sm:text-lg leading-relaxed">
+            MGF is a forward-thinking patent and trademark law firm, providing comprehensive legal and technical support to clients across the United States and the world. 
+          </p>
+          <p class="text-[#94A3B8] text-sm sm:text-base leading-relaxed">
+            Our resourceful, experienced lawyers bring creative problem-solving to patent prosecution, trademark registration, and intellectual property litigation – providing tailored, practical and cost-effective solutions to meet each client's unique needs.
+          </p>
+          <div class="flex gap-4 pt-2">
+            <a href="/about-us" class="px-5 py-2.5 rounded-lg border border-[#c5a880]/20 text-[#c5a880] hover:bg-[#c5a880]/5 text-xs font-bold tracking-wider uppercase transition-all">
+              Our Team
+            </a>
+            <a href="#expertise" class="px-5 py-2.5 rounded-lg bg-[#c5a880] text-[#0A0F1D] hover:bg-[#b0936b] text-xs font-bold tracking-wider uppercase transition-all">
+              Our Expertise
+            </a>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-3 gap-6 text-center">
+          <div class="bg-[#12192c] border border-[#c5a880]/10 p-6 rounded-xl flex flex-col justify-center space-y-2 shadow">
+            <span class="text-3xl sm:text-4xl font-extrabold text-[#c5a880]">98%</span>
+            <span class="text-[10px] text-slate-300 font-bold uppercase tracking-wider leading-snug">Patent Success Rate</span>
+          </div>
+          <div class="bg-[#12192c] border border-[#c5a880]/10 p-6 rounded-xl flex flex-col justify-center space-y-2 shadow">
+            <span class="text-3xl sm:text-4xl font-extrabold text-[#c5a880]">50+</span>
+            <span class="text-[10px] text-slate-300 font-bold uppercase tracking-wider leading-snug">Years Combined Exp</span>
+          </div>
+          <div class="bg-[#12192c] border border-[#c5a880]/10 p-6 rounded-xl flex flex-col justify-center space-y-2 shadow">
+            <span class="text-3xl sm:text-4xl font-extrabold text-[#c5a880]">15+</span>
+            <span class="text-[10px] text-slate-300 font-bold uppercase tracking-wider leading-snug">IP Professionals</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Expertise / Lifecycle Section -->
+    <section id="expertise" class="border-y border-[#c5a880]/10 bg-[#070b16] py-24">
+      <div class="container mx-auto px-4 max-w-5xl space-y-16">
+        <div class="text-center space-y-4 max-w-2xl mx-auto">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#c5a880]">What We Do</span>
+          <h2 class="text-3xl sm:text-4xl font-serif text-white">Multidisciplinary IP Solutions</h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Our team ensures better outcomes at every stage of your intellectual property lifecycle. We proactively manage legal risk to enhance, build and protect your assets.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- 01. Pre-Filing -->
+          <div class="bg-[#0A0F1D] border border-[#c5a880]/10 p-8 rounded-2xl space-y-6 shadow hover:border-[#c5a880]/30 transition-colors">
+            <div class="flex items-center justify-between">
+              <span class="text-3xl font-black text-[#c5a880]/20 font-mono">01.</span>
+              <span class="w-2.5 h-2.5 rounded-full bg-[#c5a880]"></span>
+            </div>
+            <h3 class="text-xl font-bold text-white font-serif">Pre-Filing Support</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Practical advice, portfolio strategizing, and thorough risk analysis for the application phase.
+            </p>
+            <ul class="space-y-2.5 text-xs text-slate-300 font-medium pt-2">
+              <li class="flex items-center gap-2">✔ Prior art searches</li>
+              <li class="flex items-center gap-2">✔ Patentability analysis</li>
+              <li class="flex items-center gap-2">✔ Patent application drafting</li>
+              <li class="flex items-center gap-2">✔ Patent strategy development</li>
+              <li class="flex items-center gap-2">✔ Portfolio management</li>
+            </ul>
+          </div>
+
+          <!-- 02. Filing & Prosecution -->
+          <div class="bg-[#0A0F1D] border border-[#c5a880]/10 p-8 rounded-2xl space-y-6 shadow hover:border-[#c5a880]/30 transition-colors">
+            <div class="flex items-center justify-between">
+              <span class="text-3xl font-black text-[#c5a880]/20 font-mono">02.</span>
+              <span class="w-2.5 h-2.5 rounded-full bg-[#c5a880]"></span>
+            </div>
+            <h3 class="text-xl font-bold text-white font-serif">Filing & Prosecution</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Strategic guidance to ensure optimal outcomes during patent examination.
+            </p>
+            <ul class="space-y-2.5 text-xs text-slate-300 font-medium pt-2">
+              <li class="flex items-center gap-2">✔ USPTO filing & prosecution</li>
+              <li class="flex items-center gap-2">✔ Office action responses</li>
+              <li class="flex items-center gap-2">✔ Patent amendments</li>
+              <li class="flex items-center gap-2">✔ Appeals and petitions</li>
+              <li class="flex items-center gap-2">✔ International patent coordination</li>
+            </ul>
+          </div>
+
+          <!-- 03. Post-Grant & Defense -->
+          <div class="bg-[#0A0F1D] border border-[#c5a880]/10 p-8 rounded-2xl space-y-6 shadow hover:border-[#c5a880]/30 transition-colors">
+            <div class="flex items-center justify-between">
+              <span class="text-3xl font-black text-[#c5a880]/20 font-mono">03.</span>
+              <span class="w-2.5 h-2.5 rounded-full bg-[#c5a880]"></span>
+            </div>
+            <h3 class="text-xl font-bold text-white font-serif">Post-Grant & Counsel</h3>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+              Legal representation and advice for patent enforcement, defense, and trademark registration.
+            </p>
+            <ul class="space-y-2.5 text-xs text-slate-300 font-medium pt-2">
+              <li class="flex items-center gap-2">✔ Patent litigation support</li>
+              <li class="flex items-center gap-2">✔ Post-grant proceedings (IPR, PGR)</li>
+              <li class="flex items-center gap-2">✔ Freedom to operate analysis</li>
+              <li class="flex items-center gap-2">✔ Trademark prosecution</li>
+              <li class="flex items-center gap-2">✔ General IP counseling</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sectors Grid Section -->
+    <section id="sectors" class="container mx-auto px-4 py-24 max-w-5xl space-y-16">
+      <div class="text-center space-y-4 max-w-2xl mx-auto">
+        <span class="text-xs font-bold uppercase tracking-widest text-[#c5a880]">Sectors</span>
+        <h2 class="text-3xl sm:text-4xl font-serif text-white">Sectors We Work In</h2>
+        <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+          MGF advises and acts for inventors and companies across the gamut of technologies within the intellectual property landscape.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {sectors.map((sector) => (
+          <div class="bg-[#12192c] border border-[#c5a880]/10 p-6 rounded-2xl space-y-4 shadow hover:border-[#c5a880]/30 transition-all hover:translate-y-[-2px]">
+            <h3 class="font-bold text-[#c5a880] text-sm uppercase tracking-wider leading-snug">{sector.title}</h3>
+            <p class="text-xs text-slate-300 leading-relaxed line-clamp-4">{sector.desc}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Meet Our Team -->
+    <section id="team" class="border-y border-[#c5a880]/10 bg-[#070b16] py-24">
+      <div class="container mx-auto px-4 max-w-5xl space-y-16">
+        <div class="text-center space-y-4 max-w-2xl mx-auto">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#c5a880]">Our People</span>
+          <h2 class="text-3xl sm:text-4xl font-serif text-white">Meet Our Founders</h2>
+          <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+            Our team combines decades of high-level engineering experience with rigorous patent law expertise.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {team.map((lawyer) => (
+            <div class="bg-[#0A0F1D] border border-[#c5a880]/10 p-6 rounded-2xl flex flex-col justify-between space-y-4 shadow hover:border-[#c5a880]/30 transition-all">
+              <div class="space-y-3">
+                <div class="w-16 h-16 rounded-full bg-[#c5a880]/10 flex items-center justify-center font-serif text-[#c5a880] text-xl font-bold border border-[#c5a880]/20">
+                  {lawyer.name.split(' ').map(n => n[0]).join('')}
+                </div>
+                <div>
+                  <h3 class="text-xl font-bold text-white font-serif">{lawyer.name}</h3>
+                  <p class="text-[10px] font-bold text-[#c5a880] uppercase tracking-wider">{lawyer.role}</p>
+                  <p class="text-[10px] font-semibold text-slate-400 mt-0.5">{lawyer.creds}</p>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed font-sans line-clamp-8">{lawyer.desc}</p>
+              </div>
+              <a href="/about-us" class="text-xs font-bold text-[#c5a880] hover:underline flex items-center gap-1 mt-2">
+                View Full Profile <span>→</span>
+              </a>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action / Contact -->
+    <section id="contact" class="container mx-auto px-4 py-24 max-w-5xl text-center space-y-8">
+      <span class="text-xs font-bold uppercase tracking-widest text-[#c5a880]">Contact Us</span>
+      <h2 class="text-3xl sm:text-5xl font-light text-white font-serif leading-tight max-w-2xl mx-auto">
+        Protect Your Innovations Globally
+      </h2>
+      <p class="text-slate-300 max-w-lg mx-auto text-sm sm:text-base leading-relaxed">
+        Speak with a licensed patent attorney about prosecution, strategic portfolio building, or trademark enforcement.
+      </p>
+      <div class="pt-4">
+        <a href="/contact" class="inline-block px-8 py-4 rounded-lg bg-[#c5a880] text-[#0A0F1D] hover:bg-[#b0936b] transition-all font-extrabold text-sm tracking-wider shadow-lg shadow-[#c5a880]/10 hover:scale-[1.02] active:scale-[0.98]">
+          TALK TO A PATENT ATTORNEY
+        </a>
+      </div>
+    </section>
+  </div>
+</Layout>

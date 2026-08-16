@@ -1,0 +1,140 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const founders = [
+  {
+    name: 'Usman Mughal',
+    role: 'Co-Founder, Patent Attorney, Shareholder',
+    creds: 'J.D. | M.S. | B.S.',
+    bio: 'Usman Mughal has been working in the patent preparation and prosecution field since 2008. He has a B.S. degree in computer engineering and a M.S. degree in electrical engineering. Usman defended his M.S. thesis from NC State University on hierarchical approach to global modeling of active antenna arrays. Usman went on to join Intel Corp. where he worked as an analog/mixed-signal design engineer for 9 years. Usman designed PLLs, DLLs, I/Os, thermal sensors, memory circuits, voltage regulators, debug software, clock distribution circuits, etc. At Intel, Usman received awards for his work and was an inventor on 11 patents. While working at Intel, Usman attended law school because of his interest in becoming a patent attorney. After passing the bar, Usman worked in law firms as an associate and then as a named partner. He co-managed day-to-day domestic and foreign prosecution and budgeting activities for a former client\'s power management and circuits patent portfolio for various law firms. Usman\'s technology practice for patents is deep and broad and covers 5G RAN standard, mixed signal circuits, antennas, software, memories (volatile and non-volatile), semiconductor process and packaging, business methods, artificial intelligence hardware, and processors. Usman is regularly recognized for his work. For example, Usman is listed as a "Rising star" by the Oregon Super Lawyers over multiple years. He is rated as "Top Lawyer" by Portland Monthly magazine. Usman is also active in the legal community and community at large. He is part of the founding board of Oregon Muslim Bar Association (OMBA). At OMBA, he interviews judicial and political candidates for endorsement requests. Usman also co-founded a free health clinic in Portland, Oregon, which was later merged with a larger free health provider. Usman supports education for the underprivileged. He led the funding and construction of a primary school in a remote village of Pakistan. Over 50% of the student body is female in that school.'
+  },
+  {
+    name: 'Kate Gaudry',
+    role: 'Co-Founder, Patent Attorney, Shareholder',
+    creds: 'Ph.D. | J.D. | B.S.',
+    bio: 'Kate\'s practice and background spans technology areas, including physics, neuroscience, artificial intelligence, biology and software. Her current practice focuses on artificial intelligence, bioinformatics, and software. Kate has wet/dry-lab experiences in these areas from institutions including Harvard University, the University of California San Diego, Los Alamos National Laboratory, and M.D. Anderson Cancer Center. Kate represents clients ranging from start-ups to Fortune 100 companies. She has represented universities and companies that have spun-off from universities. Kate has been an active participant in the legal field that has considered how the advancement of artificial intelligence will affect the legal field and may shape patenting strategies or examination in the field. She has co-authored dozens of articles and a book chapter pertaining to this topic, and she is a Vice-Chair of the AI Task Force of the American Intellectual Property Law Association (AIPLA). Kate is also a strong advocate for the physically disabled. She has promoted virtual-work environments and other arrangements, so as to ensure that others with disabilities can intellectually and socially contribute to society. She has been a vocal advocate of others with disabilities through online groups and by contributing to a book about real-life experiences pertaining to a new treatment for multiple sclerosis. Burt, R. K. (2023). Everyday Miracles: Curing Multiple Sclerosis, Scleroderma and Other Diseases by Hematopoietic Stem Cell Transplant (pp. 78-80). Forefront Books.'
+  },
+  {
+    name: 'Thomas Franklin',
+    role: 'Co-Founder, Patent Attorney, Shareholder',
+    creds: 'J.D. | B.S.',
+    bio: 'Thomas Franklin ("Tom") is a founding partner of the firm. He focuses his practice on patent prosecution, licensing, and intellectual capital management with 30 years of experience. Tom is expert in portfolio management, IP audits, due diligence, and strategic planning processes. Through an IP Asset Management plan, he tailors strategy to business goals, competitive pressures, and funding constraints to leverage intangible assets with intellectual property. As an entrepreneur, Tom has developed a client-facing patent portfolio management tool, Triangle IP, that allows a company to understand and manage their patent portfolio. Tom uses IP protection to maintain the dominance of large companies and assist emerging enterprises who are vying to dominate. Tom is widely recognized by Chambers USA, The Best Lawyers in America®, Legal 500 US for Patent Prosecution. Awards include a Managing Intellectual Property magazine IP Star, a Colorado Super Lawyer, Lexology and the International Law Office Client Choice Award USA & Canada, a top patent practitioner by IAM Patent 1000, and a top strategist in IAM Strategy 300. He was honored by Law Week Colorado to its "Barrister\'s Best" list as the "People\'s Choice" for Best IP Non-Litigator and named a Lawyer of the Year in 2012 by Law Week Colorado for the successful effort to bring a Regional Patent and Trademark Office to the Rocky Mountain Region in Denver to fulfill his vision of a nationwide workforce of the brightest and best examiners. The San Diego State University Alumni Association recognized and honored Tom with the 2014 Distinguished Alumni Award from the College of Engineering. Before entering the field of law, Tom spent nine years working in semiconductor fabrication and digital design for wireless data links as a Senior Engineer in the defense industry. Tom\'s technical experience broadly covers the areas of software, AI, health tech, blockchain, Internet technology, IT security, fintech, content delivery, business methods, clean tech, circuit design, imaging arrays, cryptographic design, telecommunications, electronic design tools, wireless communications, networking, and telemetry systems.'
+  }
+];
+
+const team = [
+  {
+    name: 'Phoebe Young',
+    role: 'Paralegal',
+    creds: 'B.A.',
+    bio: 'Phoebe specializes in docketing management, USPTO filings, and administrative legal support, bringing precise detail to file maintenance.'
+  },
+  {
+    name: 'Dana Montgomery',
+    role: 'Paralegal',
+    creds: 'B.A.',
+    bio: 'Dana brings over 13 years of patent prosecution experience and supports partners, attorneys, and patent agents. She prepares, files, and prosecutes US patent applications; drafts IDS, declaration, and assignment documents; and coordinates foreign filings. Dana oversees docket data entry, monitors attorney docket reports, maintains comprehensive records, and compiles details on upcoming actions.'
+  },
+  {
+    name: 'Alanna Woods',
+    role: 'Trademark Paralegal',
+    creds: 'B.S.',
+    bio: 'Alanna is a Trademark Paralegal who supports the firm\'s trademark practice, focusing on prosecution, maintenance, and portfolio management. She assist attorneys with trademark filings, docket management, searches, document preparation, and client communications.'
+  },
+  {
+    name: 'Joanna Cummings',
+    role: 'Paralegal Assistant',
+    creds: 'B.Mus.',
+    bio: 'Joanna is brand new to intellectual property law with a background in music and administrative support. She has a bachelor\'s in music and 12 years of private teaching experience after building a full-time private studio. She also brings experience in clinic administration, insurance, and bookkeeping. Joanna assists with accurate docket entry, closely monitors attorney docket reports, maintains comprehensive records, and compiles information about upcoming actions.'
+  },
+  {
+    name: 'Zahra Baloch',
+    role: 'Chief People Officer',
+    creds: 'M.P.H. | B.S.',
+    bio: 'Zahra is the Chief People Officer for the firm. She manages day-to-day human resources, benefits, and payroll, ensuring employees are paid on time and obligations are handled promptly. Prior to joining MGF, she worked at Oregon Health Sciences University and the North West Health Foundation.'
+  },
+  {
+    name: 'Mahin Mughal',
+    role: 'Law Intern',
+    creds: 'J.D. | B.S.',
+    bio: 'Mahin is a law intern at MGF who manages the firm\'s social media presence and assists with administrative and paralegal tasks. She is an avid reader and writer whose novel _Badlands_ is available on Amazon, and she aspires to become an attorney.'
+  }
+];
+---
+
+<Layout title="About Us | MGF Law">
+  <div class="min-h-screen bg-[#0A0F1D] text-white selection:bg-[#c5a880] selection:text-[#0A0F1D] pb-16">
+    <!-- Header Hero -->
+    <section class="border-b border-[#c5a880]/10 bg-[#070b16] py-16 text-center space-y-4">
+      <div class="container mx-auto px-4 max-w-4xl">
+        <span class="text-xs font-bold uppercase tracking-widest text-[#c5a880]">Our Firm</span>
+        <h1 class="text-4xl sm:text-5xl font-serif text-white leading-tight">About MGF Law</h1>
+        <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+          MGF Law's solution-driven outlook is the product of an innovative, collaborative, and diverse culture.
+        </p>
+      </div>
+    </section>
+
+    <!-- Firm History/Details -->
+    <section class="container mx-auto px-4 py-20 max-w-4xl space-y-8 font-sans">
+      <h2 class="text-2xl sm:text-3xl font-serif text-white border-b border-[#c5a880]/10 pb-4">Mughal Gaudry & Franklin PC</h2>
+      <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+        Mughal Gaudry & Franklin PC (DBA ImpactPatents.com) is a minority-owned, diverse, highly sophisticated, and result and client-oriented boutique intellectual property (IP) law firm. We bring decades of collective engineering experience to protect our client's cutting edge technological innovations. We also bring decades of collective patent law experience including law firm experiences.
+      </p>
+      <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+        We specialize in electrical and computer engineering arts, and mechanical arts including semiconductor process, semiconductor packaging, semiconductor tools, circuits, software, optics, memories, batteries, chemical arts, artificial intelligence, fin-tech, business methods, cross-section of bio-tech and AI, and emerging technologies. Our practitioners have years of engineering experience, and advanced engineering and science degrees.
+      </p>
+      <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+        Our staff is experienced in all facets of patent preparation and prosecution. Our staff assists with budget forecasting for clients upon request. We have engagements with preferred foreign counsels in Europe, China, Taiwan, Australia, South Korea, etc. As such, we manage foreign filings and prosecution for our clients.
+      </p>
+      <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+        Mughal Gaudry & Franklin PC has assembled an amazing exclusive back office team of patent engineers, patent analysts, draft persons, and quality engineers with top technical backgrounds that are focused on spending the time necessary to deliver the highest quality prosecution work product under the close supervision of licensed patent prosecutors.
+      </p>
+    </section>
+
+    <!-- Meet the Founders -->
+    <section class="container mx-auto px-4 py-12 max-w-4xl space-y-16">
+      <h2 id="professionals" class="text-2xl sm:text-3xl font-serif text-white border-b border-[#c5a880]/10 pb-4 text-center">Meet the Partners</h2>
+      
+      <div class="space-y-16">
+        {founders.map((founder) => (
+          <div class="bg-[#12192c] border border-[#c5a880]/10 p-8 rounded-2xl space-y-4 shadow">
+            <div class="flex items-center gap-4 border-b border-[#c5a880]/10 pb-4">
+              <div class="w-14 h-14 rounded-full bg-[#c5a880]/10 flex items-center justify-center font-serif text-[#c5a880] text-lg font-bold border border-[#c5a880]/20 shrink-0">
+                {founder.name.split(' ').map(n => n[0]).join('')}
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-white font-serif leading-snug">{founder.name}</h3>
+                <p class="text-xs font-semibold text-[#c5a880] uppercase tracking-wider">{founder.role}</p>
+                <p class="text-[10px] text-slate-400 mt-0.5">{founder.creds}</p>
+              </div>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-sans">{founder.bio}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Meet the Support Team -->
+    <section class="container mx-auto px-4 py-16 max-w-4xl space-y-12">
+      <h2 class="text-2xl sm:text-3xl font-serif text-white border-b border-[#c5a880]/10 pb-4 text-center">Team & Associates</h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {team.map((member) => (
+          <div class="bg-[#12192c]/60 border border-[#c5a880]/5 p-6 rounded-xl space-y-3 shadow-sm hover:border-[#c5a880]/20 transition-all">
+            <div class="flex items-center gap-3 border-b border-[#c5a880]/5 pb-3">
+              <div class="w-10 h-10 rounded-full bg-[#c5a880]/5 flex items-center justify-center font-serif text-[#c5a880] text-sm font-bold border border-[#c5a880]/10 shrink-0">
+                {member.name.split(' ').map(n => n[0]).join('')}
+              </div>
+              <div>
+                <h3 class="text-base font-bold text-white font-serif">{member.name}</h3>
+                <p class="text-[10px] font-semibold text-[#c5a880] uppercase tracking-wider">{member.role}</p>
+              </div>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed font-sans">{member.bio}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  </div>
+</Layout>

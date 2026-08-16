@@ -1,0 +1,26 @@
+{
+  "name": "mgf-website",
+  "version": "1.0.0",
+  "description": "Mughal Gaudry & Franklin PC - Intellectual Property Law Firm | MGF Law",
+  "type": "module",
+  "scripts": {
+    "dev": "NODE_ENV=development ASTRO_TELEMETRY_DISABLED=1 astro dev --port 4323",
+    "start": "NODE_ENV=development ASTRO_TELEMETRY_DISABLED=1 astro dev --port 4323",
+    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "preview": "NODE_ENV=development ASTRO_TELEMETRY_DISABLED=1 astro preview --port 4323",
+    "astro": "ASTRO_TELEMETRY_DISABLED=1 astro"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^13.7.0",
+    "@astrojs/node": "^10.1.4",
+    "@astrojs/sitemap": "^3.2.1",
+    "@fontsource-variable/jetbrains-mono": "^5.2.8",
+    "@fontsource-variable/manrope": "^5.2.8",
+    "@fontsource-variable/outfit": "^5.2.8",
+    "@tailwindcss/vite": "^4.3.0",
+    "astro": "^6.4.5",
+    "jiti": "^2.7.0",
+    "sharp": "^0.33.2",
+    "tailwindcss": "^4.3.0"
+  }
+}

@@ -1,0 +1,81 @@
+---
+---
+<div id="consent-banner" class="fixed bottom-0 left-0 right-0 z-50 transform translate-y-full transition-transform duration-500 ease-in-out bg-card border-t border-border shadow-2xl p-4 sm:p-6" hidden>
+  <div class="container mx-auto max-w-4xl flex flex-col sm:flex-row items-center gap-4">
+    <div class="flex-1">
+      <h3 class="text-sm font-bold text-foreground mb-1">We value your privacy</h3>
+      <p class="text-xs text-muted-foreground">
+        We use cookies to analyze site traffic and improve your experience. By clicking "Accept All", you consent to our use of cookies. 
+        <a href="/privacy" class="text-primary hover:underline">Privacy Policy</a>.
+      </p>
+    </div>
+    <div class="flex items-center gap-2 shrink-0">
+      <button id="consent-decline" class="px-4 py-2 text-xs font-semibold text-foreground bg-secondary hover:bg-secondary-hover rounded-lg transition-colors">
+        Decline
+      </button>
+      <button id="consent-accept" class="px-4 py-2 text-xs font-semibold text-white bg-accent hover:bg-accent-hover rounded-lg transition-colors shadow-md">
+        Accept All
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  function initConsent() {
+    const banner = document.getElementById('consent-banner');
+    const acceptBtn = document.getElementById('consent-accept');
+    const declineBtn = document.getElementById('consent-decline');
+    
+    if (!banner || !acceptBtn || !declineBtn) return;
+    
+    const consent = localStorage.getItem('cookie-consent');
+    if (!consent) {
+      setTimeout(() => {
+        banner.removeAttribute('hidden');
+        // trigger reflow
+        void banner.offsetWidth;
+        banner.classList.remove('translate-y-full');
+      }, 500);
+    } else if (consent === 'accepted') {
+      triggerAnalytics();
+    }
+    
+    acceptBtn.addEventListener('click', () => {
+      localStorage.setItem('cookie-consent', 'accepted');
+      hideBanner();
+      triggerAnalytics();
+    });
+    
+    declineBtn.addEventListener('click', () => {
+      localStorage.setItem('cookie-consent', 'declined');
+      hideBanner();
+    });
+    
+    function hideBanner() {
+      banner.classList.add('translate-y-full');
+      setTimeout(() => banner.setAttribute('hidden', 'true'), 500);
+    }
+    
+    function triggerAnalytics() {
+      // Ensure dataLayer exists
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){window.dataLayer.push(arguments);}
+      
+      // Update consent mode if gtag exists
+      gtag('consent', 'update', {
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted',
+        'ad_storage': 'granted',
+        'analytics_storage': 'granted'
+      });
+      
+      // Load MS Clarity
+      if (window.loadClarity) {
+        window.loadClarity();
+      }
+    }
+  }
+  
+  document.addEventListener('DOMContentLoaded', initConsent);
+  document.addEventListener('astro:page-load', initConsent);
+</script>
