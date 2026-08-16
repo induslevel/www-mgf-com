@@ -47,6 +47,43 @@ export async function getStaticPaths() {
 
 const { article, allInsights } = Astro.props;
 const otherInsights = allInsights.filter((a) => a.slug !== article.slug);
+
+function renderMarkdown(content) {
+  if (!content) return '';
+  
+  // 1. Headings
+  let html = content
+    .replace(/^## (.*?)$/gim, '<h2 class="text-2xl sm:text-3xl font-serif font-bold text-[#c5a880] mt-10 mb-4 border-b border-[#c5a880]/15 pb-2">$1</h2>')
+    .replace(/^### (.*?)$/gim, '<h3 class="text-xl font-serif font-bold text-white mt-8 mb-3">$1</h3>');
+
+  // 2. Bold text **text** -> <strong>
+  html = html.replace(/\*\*(.*?)\*\*/g, '<strong class="text-white font-bold">$1</strong>');
+
+  // 3. Italic *text* -> <em>
+  html = html.replace(/\*(.*?)\*/g, '<em class="text-slate-200">$1</em>');
+
+  // 4. Bullet points
+  html = html.replace(/^[•\*\-] (.*?)$/gim, '<li class="flex items-start gap-2.5 text-slate-300 text-sm sm:text-base leading-relaxed"><span class="text-[#c5a880] font-bold mt-0.5">•</span><span>$1</span></li>');
+
+  // 5. Paragraph splitting
+  const paragraphs = html.split(/\n\n+/);
+  const formatted = paragraphs.map((p) => {
+    p = p.trim();
+    if (!p) return '';
+    if (p.startsWith('<h2') || p.startsWith('<h3')) {
+      return p;
+    }
+    if (p.includes('<li')) {
+      return `<ul class="space-y-3 my-5 bg-[#12192c]/50 p-6 rounded-2xl border border-[#c5a880]/10">${p}</ul>`;
+    }
+    const pClean = p.replace(/\n/g, '<br />');
+    return `<p class="text-slate-300 leading-relaxed text-sm sm:text-base">${pClean}</p>`;
+  });
+
+  return formatted.join('\n');
+}
+
+const renderedHtml = renderMarkdown(article.content);
 ---
 
 <Layout title={`${article.title} | MGF Law Insights`}>
@@ -90,11 +127,9 @@ const otherInsights = allInsights.filter((a) => a.slug !== article.slug);
         <div class="absolute inset-0 bg-gradient-to-t from-[#0A0F1D] via-transparent to-transparent opacity-85"></div>
       </div>
 
-      <!-- Article Prose Content -->
-      <article class="space-y-8 text-slate-300 leading-relaxed text-sm sm:text-base border-b border-[#c5a880]/15 pb-16">
-        <div class="whitespace-pre-line space-y-6">
-          {article.content}
-        </div>
+      <!-- Article Prose Content with Semantic HTML (bold, headings, lists) -->
+      <article class="space-y-6 text-slate-300 leading-relaxed text-sm sm:text-base border-b border-[#c5a880]/15 pb-16">
+        <div class="space-y-6" set:html={renderedHtml} />
       </article>
 
       <!-- Read Other Insights -->
