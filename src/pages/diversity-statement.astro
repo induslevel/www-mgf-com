@@ -1,0 +1,169 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const pillars = [
+  {
+    title: "Recruit",
+    desc: "Attract talent across genders, races, ethnicities, sexual orientations, disability, and neurodiversity.",
+    icon: "M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"
+  },
+  {
+    title: "Retain",
+    desc: "Provide hands-on training, mentorship, and personalized career planning.",
+    icon: "M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-5.25 6.557q.105.748.258 1.482m0 0q.618 2.99 2.012 5.561m-2.27-7.043v-3.675"
+  },
+  {
+    title: "Represent",
+    desc: "Champion underrepresented communities through outreach and pro bono work.",
+    icon: "M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-.778.099-1.533.284-2.253"
+  }
+];
+---
+
+<Layout title="Diversity Statement | MGF Law">
+  <div class="min-h-screen bg-[#0A0F1D] text-white selection:bg-[#c5a880] selection:text-[#0A0F1D] pb-16 font-sans">
+    
+    <!-- Hero Section -->
+    <section class="border-b border-[#c5a880]/10 bg-[#070b16] py-20 text-center space-y-4">
+      <div class="container mx-auto px-4 max-w-4xl space-y-4">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-[#c5a880]/30 bg-[#c5a880]/5 text-[#c5a880] text-xs font-semibold">
+          <span>Last updated: January 09, 2024</span>
+        </div>
+        <p class="text-xs font-bold uppercase tracking-widest text-[#c5a880]">Our Commitment to Inclusion</p>
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-serif text-white leading-tight font-light">
+          Diversity <span class="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-[#c5a880] to-[#e4d4b1]">Statement</span>
+        </h1>
+        <p class="text-slate-300 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed pt-2">
+          At Mughal Gaudry & Franklin PC (MGF), we passionately believe in the power and necessity of diversity within our team. Our commitment goes beyond recruitment — we focus on retention and development so that individuals from a wide spectrum of backgrounds feel supported and thrive.
+        </p>
+      </div>
+    </section>
+
+    <!-- 3 Core Pillars -->
+    <section class="container mx-auto px-4 py-16 max-w-5xl">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {pillars.map((pillar) => (
+          <div class="bg-[#12192c] border border-[#c5a880]/15 p-8 rounded-2xl space-y-4 shadow hover:border-[#c5a880]/35 transition-all">
+            <div class="w-12 h-12 rounded-xl bg-[#c5a880]/10 flex items-center justify-center text-[#c5a880] border border-[#c5a880]/20">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.75" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" d={pillar.icon}></path>
+              </svg>
+            </div>
+            <h3 class="text-2xl font-serif font-bold text-white">{pillar.title}</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">
+              {pillar.desc}
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- Main Content & Detailed Narrative -->
+    <section class="container mx-auto px-4 py-8 max-w-4xl space-y-16">
+      
+      <!-- Hero Banner Image -->
+      <div class="relative w-full h-[300px] sm:h-[420px] rounded-2xl overflow-hidden border border-[#c5a880]/15 shadow-xl">
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1200" alt="MGF Law Diverse Team Collaboration" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-t from-[#0A0F1D] via-transparent to-transparent opacity-85"></div>
+      </div>
+
+      <!-- Section: Inclusivity at the Core -->
+      <div class="space-y-4 border-b border-[#c5a880]/10 pb-10">
+        <h2 class="text-2xl sm:text-3xl font-serif font-bold text-[#c5a880]">Inclusivity at the Core</h2>
+        <p class="text-slate-300 leading-relaxed text-base sm:text-lg">
+          We understand that a diverse workforce is essential to excel in patent law. Diversity brings many perspectives and ideas, fostering innovation and a dynamic environment that sits at the heart of our firm’s ethos.
+        </p>
+      </div>
+
+      <!-- Section: Inclusivity in Recruitment -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center border-b border-[#c5a880]/10 pb-10">
+        <div class="space-y-4">
+          <h2 class="text-2xl sm:text-3xl font-serif font-bold text-[#c5a880]">Inclusivity in Recruitment</h2>
+          <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+            Our recruitment approach actively attracts talent from varied genders, races, ethnicities, sexual orientations, as well as disabled and neurodivergent professionals. These perspectives fuel the innovation and excellence our clients expect.
+          </p>
+        </div>
+        <div class="rounded-xl overflow-hidden border border-[#c5a880]/10 h-56 shadow">
+          <img src="https://images.unsplash.com/photo-1573497491208-6b1acb260507?auto=format&fit=crop&q=80&w=800" alt="Inclusive Recruitment" class="w-full h-full object-cover" />
+        </div>
+      </div>
+
+      <!-- Section: Beyond Recruitment – Focusing on Retention -->
+      <div class="space-y-4 border-b border-[#c5a880]/10 pb-10">
+        <h2 class="text-2xl sm:text-3xl font-serif font-bold text-[#c5a880]">Beyond Recruitment – Focusing on Retention</h2>
+        <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+          We invest in hands-on training and personalized career planning to nurture and retain our people. Growth and development are built into our culture so every team member feels valued, supported, and integral to our success.
+        </p>
+      </div>
+
+      <!-- Section: Zero Tolerance for Discrimination -->
+      <div class="space-y-4 border-b border-[#c5a880]/10 pb-10 bg-[#12192c]/40 p-6 sm:p-8 rounded-2xl border border-[#c5a880]/15">
+        <h2 class="text-2xl sm:text-3xl font-serif font-bold text-white">Zero Tolerance for Discrimination</h2>
+        <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+          Discrimination has no place at MGF. Our policies and practices prohibit any form of discrimination, ensuring a fair, equitable workplace where everyone is respected and empowered to reach their potential.
+        </p>
+      </div>
+
+      <!-- Section: Continuous Learning and Development -->
+      <div class="space-y-4 border-b border-[#c5a880]/10 pb-10">
+        <h2 class="text-2xl sm:text-3xl font-serif font-bold text-[#c5a880]">Continuous Learning and Development</h2>
+        <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+          We prioritize ongoing education in diversity and inclusion. Regular seminars and workshops keep our team aligned with best practices so we continuously strengthen our culture.
+        </p>
+      </div>
+
+      <!-- Section: Community Engagement and Representation -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center border-b border-[#c5a880]/10 pb-10">
+        <div class="rounded-xl overflow-hidden border border-[#c5a880]/10 h-56 shadow order-last md:order-first">
+          <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800" alt="Community Engagement & Mentorship" class="w-full h-full object-cover" />
+        </div>
+        <div class="space-y-4">
+          <h2 class="text-2xl sm:text-3xl font-serif font-bold text-[#c5a880]">Community Engagement & Representation</h2>
+          <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+            Our commitment extends to the communities we serve. We support underrepresented groups through outreach and pro bono work, including yearly Ramadan events with minority affinity bar groups such as the Oregon Muslim Bar Association, connecting lawyers and judges with aspiring attorneys. We routinely assist inventors from disadvantaged backgrounds by guiding them through the patent process and helping draft their applications.
+          </p>
+        </div>
+      </div>
+
+      <!-- Section: Excellence through Diversity -->
+      <div class="space-y-4 border-b border-[#c5a880]/10 pb-10">
+        <h2 class="text-2xl sm:text-3xl font-serif font-bold text-[#c5a880]">Excellence through Diversity</h2>
+        <p class="text-slate-300 leading-relaxed text-sm sm:text-base">
+          Embracing diverse perspectives is fundamental to our success. It aligns with our values and sharpens our ability to innovate, solve problems, and serve clients in a global context.
+        </p>
+      </div>
+
+      <!-- Contact Info Section -->
+      <div class="bg-[#12192c] border border-[#c5a880]/20 p-8 sm:p-10 rounded-2xl shadow-xl space-y-6">
+        <div class="text-center space-y-2 max-w-xl mx-auto">
+          <h2 class="text-2xl sm:text-3xl font-serif font-bold text-white">Contact Us</h2>
+          <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            Have questions about our Diversity Statement or want to partner with us on community initiatives? Reach out anytime.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4 text-center">
+          <div class="p-4 rounded-xl bg-[#0A0F1D]/60 border border-[#c5a880]/10 space-y-1">
+            <span class="text-[10px] font-bold text-[#c5a880] uppercase tracking-wider block">Email</span>
+            <a href="mailto:contact@mgf.law" class="text-sm font-semibold text-white hover:text-[#c5a880] transition-colors">contact@mgf.law</a>
+          </div>
+          <div class="p-4 rounded-xl bg-[#0A0F1D]/60 border border-[#c5a880]/10 space-y-1">
+            <span class="text-[10px] font-bold text-[#c5a880] uppercase tracking-wider block">Phone</span>
+            <a href="tel:9716340286" class="text-sm font-semibold text-white hover:text-[#c5a880] transition-colors">(971) 634-0286</a>
+          </div>
+          <div class="p-4 rounded-xl bg-[#0A0F1D]/60 border border-[#c5a880]/10 space-y-1">
+            <span class="text-[10px] font-bold text-[#c5a880] uppercase tracking-wider block">Website</span>
+            <a href="/contact" class="text-sm font-semibold text-white hover:text-[#c5a880] transition-colors">mgf.law/contact</a>
+          </div>
+        </div>
+
+        <div class="pt-6 text-center">
+          <a href="/contact" class="inline-block px-8 py-3.5 rounded-lg bg-[#c5a880] text-[#0A0F1D] hover:bg-[#b0936b] transition-all font-extrabold text-xs tracking-wider uppercase shadow shadow-[#c5a880]/10">
+            TALK TO US
+          </a>
+        </div>
+      </div>
+
+    </section>
+  </div>
+</Layout>

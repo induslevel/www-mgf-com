@@ -2,7 +2,7 @@
 import ThemeToggle from './ThemeToggle.astro';
 ---
 
-<header class="container mx-auto px-4 py-4 max-w-6xl relative z-50">
+<header class="container mx-auto px-4 py-4 max-w-6xl relative z-50 font-sans">
   <div class="flex justify-between items-center bg-[#12192c] border border-[#c5a880]/15 p-3 sm:p-4 rounded-xl shadow-md relative">
     
     <!-- Left Side: Brand Logo -->
@@ -15,22 +15,23 @@ import ThemeToggle from './ThemeToggle.astro';
     </div>
     
     <!-- Desktop Navigation Menu -->
-    <nav class="hidden lg:flex items-center gap-1.5 xl:gap-2.5">
-      <a href="/about-us" class="text-xs xl:text-sm font-semibold text-slate-300 hover:text-[#c5a880] px-3 py-2 rounded-lg transition-all">ABOUT US</a>
-      <a href="/about-us#professionals" class="text-xs xl:text-sm font-semibold text-slate-300 hover:text-[#c5a880] px-3 py-2 rounded-lg transition-all">OUR PEOPLE</a>
-      <a href="/services" class="text-xs xl:text-sm font-semibold text-slate-300 hover:text-[#c5a880] px-3 py-2 rounded-lg transition-all">SERVICES</a>
-      <a href="/#sectors" class="text-xs xl:text-sm font-semibold text-slate-300 hover:text-[#c5a880] px-3 py-2 rounded-lg transition-all">TECHNOLOGIES</a>
+    <nav class="hidden lg:flex items-center gap-1 xl:gap-2">
+      <a href="/about-us" class="text-xs xl:text-sm font-semibold text-slate-300 hover:text-[#c5a880] px-2.5 py-2 rounded-lg transition-all">ABOUT US</a>
+      <a href="/about-us#professionals" class="text-xs xl:text-sm font-semibold text-slate-300 hover:text-[#c5a880] px-2.5 py-2 rounded-lg transition-all">OUR PEOPLE</a>
+      <a href="/services" class="text-xs xl:text-sm font-semibold text-slate-300 hover:text-[#c5a880] px-2.5 py-2 rounded-lg transition-all">SERVICES</a>
+      <a href="/diversity-statement" class="text-xs xl:text-sm font-semibold text-slate-300 hover:text-[#c5a880] px-2.5 py-2 rounded-lg transition-all">DIVERSITY</a>
+      <a href="/#sectors" class="text-xs xl:text-sm font-semibold text-slate-300 hover:text-[#c5a880] px-2.5 py-2 rounded-lg transition-all">TECHNOLOGIES</a>
     </nav>
 
     <!-- Desktop Controls & Contact -->
-    <div class="hidden lg:flex items-center gap-4">
+    <div class="hidden lg:flex items-center gap-3 xl:gap-4">
       <div class="flex flex-col text-right">
         <span class="text-[10px] text-slate-400 font-bold uppercase tracking-wider">Talk to us</span>
         <a href="tel:9716340286" class="text-xs font-bold text-white hover:text-[#c5a880] transition-colors">(971) 634-0286</a>
       </div>
       <div class="w-px h-6 bg-[#c5a880]/20 mx-1"></div>
       <ThemeToggle />
-      <a href="/contact" class="h-10 flex items-center justify-center px-5 rounded-lg font-extrabold text-xs tracking-wider uppercase bg-[#c5a880] text-[#0A0F1D] hover:bg-[#b0936b] transition-all ml-2 shadow shadow-[#c5a880]/10">
+      <a href="/contact" class="h-10 flex items-center justify-center px-4 xl:px-5 rounded-lg font-extrabold text-xs tracking-wider uppercase bg-[#c5a880] text-[#0A0F1D] hover:bg-[#b0936b] transition-all ml-1 shadow shadow-[#c5a880]/10">
         CONTACT
       </a>
     </div>
@@ -50,6 +51,7 @@ import ThemeToggle from './ThemeToggle.astro';
           <a href="/about-us" class="text-sm font-semibold text-slate-300 hover:text-[#c5a880] px-3 py-2 rounded-lg transition-all">ABOUT US</a>
           <a href="/about-us#professionals" class="text-sm font-semibold text-slate-300 hover:text-[#c5a880] px-3 py-2 rounded-lg transition-all">OUR PEOPLE</a>
           <a href="/services" class="text-sm font-semibold text-slate-300 hover:text-[#c5a880] px-3 py-2 rounded-lg transition-all">SERVICES</a>
+          <a href="/diversity-statement" class="text-sm font-semibold text-slate-300 hover:text-[#c5a880] px-3 py-2 rounded-lg transition-all">DIVERSITY STATEMENT</a>
           <a href="/#sectors" class="text-sm font-semibold text-slate-300 hover:text-[#c5a880] px-3 py-2 rounded-lg transition-all">TECHNOLOGIES</a>
           <a href="/contact" class="text-sm font-bold text-[#c5a880] px-3 py-2 rounded-lg transition-all">CONTACT US</a>
         </nav>
