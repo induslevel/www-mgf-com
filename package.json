@@ -11,16 +11,16 @@
     "astro": "ASTRO_TELEMETRY_DISABLED=1 astro"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^13.7.0",
-    "@astrojs/node": "^10.1.4",
+    "@astrojs/cloudflare": "^14.3.1",
+    "@astrojs/node": "^11.1.5",
     "@astrojs/sitemap": "^3.2.1",
     "@fontsource-variable/jetbrains-mono": "^5.2.8",
     "@fontsource-variable/manrope": "^5.2.8",
     "@fontsource-variable/outfit": "^5.2.8",
     "@tailwindcss/vite": "^4.3.0",
-    "astro": "^6.4.5",
+    "astro": "^7.3.2",
     "jiti": "^2.7.0",
-    "sharp": "^0.33.2",
+    "sharp": "^0.35.4",
     "tailwindcss": "^4.3.0"
   }
 }
